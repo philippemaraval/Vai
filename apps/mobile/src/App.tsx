@@ -31,7 +31,9 @@ export function App() {
   const [showAdmin, setShowAdmin] = useState(false);
   const [activeView, setActiveView] = useState<AppView>('map');
   const [sheetState, setSheetState] = useState<SheetState>('hidden');
-  const hasActiveQuery = search.trim() !== '' || activeFilters.length > 0 || activeCategories.length > 0;
+  const selectedNeighborhood = demoNeighborhoods.find((neighborhood) => neighborhood.id === selectedNeighborhoodId);
+  const hasActiveQuery =
+    search.trim() !== '' || activeFilters.length > 0 || activeCategories.length > 0 || Boolean(selectedNeighborhood);
 
   const filteredPlaces = useMemo(() => {
     if (!hasActiveQuery) return [];
@@ -40,9 +42,10 @@ export function App() {
       const exactSearchMatch = search.trim() === '' || place.name.toLowerCase() === search.trim().toLowerCase();
       const filtersMatch = activeFilters.every((filter) => criterionMatches(place, filter));
       const categoryMatch = activeCategories.length === 0 || activeCategories.includes(place.category as CategoryFilter);
-      return exactSearchMatch && filtersMatch && categoryMatch;
+      const neighborhoodMatch = !selectedNeighborhood || place.neighborhood === selectedNeighborhood.name;
+      return exactSearchMatch && filtersMatch && categoryMatch && neighborhoodMatch;
     });
-  }, [activeCategories, activeFilters, hasActiveQuery, search]);
+  }, [activeCategories, activeFilters, hasActiveQuery, search, selectedNeighborhood]);
 
   useEffect(() => {
     if (!hasActiveQuery) {
@@ -202,10 +205,14 @@ export function App() {
       <FilterDrawer
         open={drawerOpen}
         activeFilters={activeFilters}
+        neighborhoods={demoNeighborhoods}
+        selectedNeighborhoodId={selectedNeighborhoodId}
         onToggleFilter={toggleFilter}
+        onSelectNeighborhood={setSelectedNeighborhoodId}
         onClear={() => {
           setActiveFilters([]);
           setActiveCategories([]);
+          setSelectedNeighborhoodId(undefined);
         }}
         onClose={() => setDrawerOpen(false)}
       />

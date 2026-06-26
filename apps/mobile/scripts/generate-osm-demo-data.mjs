@@ -29,10 +29,9 @@ const criteriaKeys = [
   'dog_friendly'
 ];
 
-const marseilleBbox = '43.16,5.22,43.40,5.58';
 const queries = [
-  `nw["amenity"="restaurant"]["name"](${marseilleBbox});`,
-  `nw["amenity"~"^(bar|pub|biergarten)$"]["name"](${marseilleBbox});`
+  `node(area.searchArea)["amenity"="restaurant"]["name"];way(area.searchArea)["amenity"="restaurant"]["name"];`,
+  `node(area.searchArea)["amenity"~"^(bar|pub|biergarten)$"]["name"];way(area.searchArea)["amenity"~"^(bar|pub|biergarten)$"]["name"];`
 ];
 
 function ascii(value) {
@@ -121,7 +120,7 @@ function dedupeKey(name, lat, lon) {
 }
 
 async function fetchOsmQuery(fragment, index) {
-  const query = `[out:json][timeout:45];(${fragment});out center tags;`;
+  const query = `[out:json][timeout:60];area["boundary"="administrative"]["admin_level"="8"]["name"="Marseille"]->.searchArea;(${fragment});out center tags;`;
   let lastError;
 
   for (const endpoint of overpassEndpoints) {

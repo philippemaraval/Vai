@@ -84,16 +84,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-12292185157",
-    name: "A Table",
-    latitude: 43.214679,
-    longitude: 5.538648,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-12919135103",
     name: "Academie de billard",
     latitude: 43.29529,
@@ -444,16 +434,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-2905778435",
-    name: "Auberge de Pichauris",
-    latitude: 43.371309,
-    longitude: 5.535688,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-5041232621",
     name: "Aux Antipodes",
     latitude: 43.292679,
@@ -512,16 +492,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Restaurant",
     criteria: ["has_terrace"]
-  }),
-  makePlace({
-    id: "osm-node-9081877444",
-    name: "B52 cafe",
-    latitude: 43.28781,
-    longitude: 5.524568,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
   }),
   makePlace({
     id: "osm-node-7621890271",
@@ -664,16 +634,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-9051248543",
-    name: "Bar de la fontaine",
-    latitude: 43.214573,
-    longitude: 5.539255,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Bar",
-    criteria: ["has_terrace"]
-  }),
-  makePlace({
     id: "osm-node-3780623733",
     name: "Bar de la fontaine",
     latitude: 43.32895,
@@ -724,16 +684,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-3451716762",
-    name: "Bar de la Marine",
-    latitude: 43.214378,
-    longitude: 5.537947,
-    neighborhood: "Littoral Sud",
-    address: "5 Quai des Baux, Marseille",
-    category: "Bar",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-2822289332",
     name: "Bar de la Paix",
     latitude: 43.277638,
@@ -769,16 +719,6 @@ export const demoPlaces: Place[] = [
     latitude: 43.284278,
     longitude: 5.358275,
     neighborhood: "Malmousque",
-    address: "Marseille",
-    category: "Bar",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-4937607765",
-    name: "Bar de la Place",
-    latitude: 43.379965,
-    longitude: 5.350744,
-    neighborhood: "Le Panier",
     address: "Marseille",
     category: "Bar",
     criteria: []
@@ -954,31 +894,11 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-4288320390",
-    name: "Bar des Sports",
-    latitude: 43.398844,
-    longitude: 5.366772,
-    neighborhood: "Le Panier",
-    address: "Marseille",
-    category: "Bar",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-6912384579",
     name: "Bar des Sports",
     latitude: 43.319792,
     longitude: 5.382548,
     neighborhood: "Belle de Mai",
-    address: "Marseille",
-    category: "Bar",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-9789210035",
-    name: "Bar des Sports",
-    latitude: 43.369943,
-    longitude: 5.251391,
-    neighborhood: "Le Panier",
     address: "Marseille",
     category: "Bar",
     criteria: []
@@ -1022,16 +942,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Bar",
     criteria: []
-  }),
-  makePlace({
-    id: "osm-node-5132958106",
-    name: "Bar du Marche",
-    latitude: 43.294667,
-    longitude: 5.567961,
-    neighborhood: "Marseille",
-    address: "7 Cours Voltaire, Marseille",
-    category: "Bar",
-    criteria: ["has_terrace"]
   }),
   makePlace({
     id: "osm-node-8341407938",
@@ -1082,16 +992,6 @@ export const demoPlaces: Place[] = [
     address: "55 Rue Condorcet, Marseille",
     category: "Bar",
     criteria: []
-  }),
-  makePlace({
-    id: "osm-node-2937784254",
-    name: "Bar du XXe siecle",
-    latitude: 43.214398,
-    longitude: 5.538808,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Bar",
-    criteria: ["has_terrace"]
   }),
   makePlace({
     id: "osm-node-4713564667",
@@ -1174,16 +1074,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-5312309516",
-    name: "Bar la Cabre D'Or",
-    latitude: 43.283104,
-    longitude: 5.53485,
-    neighborhood: "Marseille",
-    address: "Boulevard Madame, Marseille",
-    category: "Bar",
-    criteria: ["has_terrace","late_opening"]
-  }),
-  makePlace({
     id: "osm-node-3819939250",
     name: "Bar le Berlioz",
     latitude: 43.289757,
@@ -1204,42 +1094,12 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-5271978921",
-    name: "Bar Le General",
-    latitude: 43.288922,
-    longitude: 5.573224,
-    neighborhood: "Marseille",
-    address: "11 Avenue de Verdun, Marseille",
-    category: "Bar",
-    criteria: ["has_terrace"]
-  }),
-  makePlace({
-    id: "osm-way-156629459",
-    name: "Bar le Jingle",
-    latitude: 43.384593,
-    longitude: 5.577467,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Bar",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-9634033729",
     name: "Bar le Mmm",
     latitude: 43.358865,
     longitude: 5.357805,
     neighborhood: "Le Panier",
     address: "110 Avenue de la Viste, Marseille",
-    category: "Bar",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-5137415425",
-    name: "Bar le Noman's Land",
-    latitude: 43.291519,
-    longitude: 5.569134,
-    neighborhood: "Marseille",
-    address: "Marseille",
     category: "Bar",
     criteria: []
   }),
@@ -1444,16 +1304,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-way-156626733",
-    name: "Bar Tabac Du Platane",
-    latitude: 43.383719,
-    longitude: 5.578306,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Bar",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-way-154594754",
     name: "Bar Tabac Le Cyrano",
     latitude: 43.285808,
@@ -1470,16 +1320,6 @@ export const demoPlaces: Place[] = [
     longitude: 5.414402,
     neighborhood: "Marseille",
     address: "Marseille",
-    category: "Bar",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-7928525985",
-    name: "Bar Tabac PMU Le Flint",
-    latitude: 43.385802,
-    longitude: 5.358721,
-    neighborhood: "Le Panier",
-    address: "13 Avenue du 8 Mai 1945, Marseille",
     category: "Bar",
     criteria: []
   }),
@@ -1622,16 +1462,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Restaurant",
     criteria: ["late_opening"]
-  }),
-  makePlace({
-    id: "osm-way-426208332",
-    name: "Basta Cosi",
-    latitude: 43.356506,
-    longitude: 5.485607,
-    neighborhood: "Marseille",
-    address: "8 Avenue Salvador Allende, Marseille",
-    category: "Restaurant",
-    criteria: []
   }),
   makePlace({
     id: "osm-node-12117352289",
@@ -2085,16 +1915,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-5132958108",
-    name: "Brasserie chez Gillou",
-    latitude: 43.294802,
-    longitude: 5.567985,
-    neighborhood: "Marseille",
-    address: "11 Cours Voltaire, Marseille",
-    category: "Bar",
-    criteria: ["has_terrace"]
-  }),
-  makePlace({
     id: "osm-node-2010715825",
     name: "Brasserie d'Ambrine",
     latitude: 43.294016,
@@ -2185,16 +2005,6 @@ export const demoPlaces: Place[] = [
     criteria: ["has_terrace"]
   }),
   makePlace({
-    id: "osm-way-75909424",
-    name: "Brasserie du Tennis",
-    latitude: 43.205457,
-    longitude: 5.518077,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Bar",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-4955166022",
     name: "Brasserie du Tramway",
     latitude: 43.298194,
@@ -2275,16 +2085,6 @@ export const demoPlaces: Place[] = [
     criteria: ["has_terrace"]
   }),
   makePlace({
-    id: "osm-node-3938499328",
-    name: "Brasserie La Peace'In",
-    latitude: 43.231001,
-    longitude: 5.537929,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: ["has_terrace"]
-  }),
-  makePlace({
     id: "osm-node-2806207797",
     name: "Brasserie La Suite",
     latitude: 43.353622,
@@ -2312,16 +2112,6 @@ export const demoPlaces: Place[] = [
     neighborhood: "Longchamp",
     address: "Marseille",
     category: "Bar",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-3451705020",
-    name: "Brasserie Le Mistral",
-    latitude: 43.213294,
-    longitude: 5.538685,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
     criteria: []
   }),
   makePlace({
@@ -2646,16 +2436,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-10065557479",
-    name: "Calendal",
-    latitude: 43.215226,
-    longitude: 5.536771,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-12199413983",
     name: "Calenzana",
     latitude: 43.29327,
@@ -2786,16 +2566,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-2811941761",
-    name: "Casa Roma",
-    latitude: 43.215277,
-    longitude: 5.536802,
-    neighborhood: "Littoral Sud",
-    address: "5 Rue Bremond, Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-2822291433",
     name: "Casanostra",
     latitude: 43.276841,
@@ -2814,16 +2584,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Bar",
     criteria: ["has_terrace"]
-  }),
-  makePlace({
-    id: "osm-node-12149810045",
-    name: "Cassis et Romarin",
-    latitude: 43.215204,
-    longitude: 5.538868,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: ["late_opening"]
   }),
   makePlace({
     id: "osm-node-2019893912",
@@ -2856,46 +2616,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-4300890898",
-    name: "Central bar",
-    latitude: 43.292667,
-    longitude: 5.567955,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Bar",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-way-156608811",
-    name: "Cercle de l'Avenir",
-    latitude: 43.394906,
-    longitude: 5.545316,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Bar",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-way-156626445",
-    name: "Cercle Mirabeau",
-    latitude: 43.384087,
-    longitude: 5.577705,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Bar",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-3451666768",
-    name: "Cesar la suite...",
-    latitude: 43.214517,
-    longitude: 5.53771,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-4764597123",
     name: "Cesar Place",
     latitude: 43.292818,
@@ -2914,16 +2634,6 @@ export const demoPlaces: Place[] = [
     address: "67 Boulevard Chave, Marseille",
     category: "Restaurant",
     criteria: []
-  }),
-  makePlace({
-    id: "osm-node-5312274644",
-    name: "Charrel Cafe / Bar du Charrel",
-    latitude: 43.284514,
-    longitude: 5.546387,
-    neighborhood: "Marseille",
-    address: "Route Nationale 8, Marseille",
-    category: "Bar",
-    criteria: ["has_terrace"]
   }),
   makePlace({
     id: "osm-node-1549176587",
@@ -2956,16 +2666,6 @@ export const demoPlaces: Place[] = [
     criteria: ["late_opening"]
   }),
   makePlace({
-    id: "osm-node-3451666766",
-    name: "Chez Cesar",
-    latitude: 43.214944,
-    longitude: 5.537238,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: ["has_terrace"]
-  }),
-  makePlace({
     id: "osm-node-1532880145",
     name: "Chez Didier & Brigitte",
     latitude: 43.289233,
@@ -2982,16 +2682,6 @@ export const demoPlaces: Place[] = [
     longitude: 5.381186,
     neighborhood: "Marseille",
     address: "1 Boulevard Louis Salvator, Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-462035640",
-    name: "Chez Eric, le lagon bleu",
-    latitude: 43.385025,
-    longitude: 5.574955,
-    neighborhood: "Marseille",
-    address: "Marseille",
     category: "Restaurant",
     criteria: []
   }),
@@ -3024,16 +2714,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Restaurant",
     criteria: []
-  }),
-  makePlace({
-    id: "osm-node-3451666767",
-    name: "Chez Gilbert",
-    latitude: 43.214837,
-    longitude: 5.537403,
-    neighborhood: "Littoral Sud",
-    address: "19 Quai des Baux, Marseille",
-    category: "Restaurant",
-    criteria: ["has_terrace","late_opening"]
   }),
   makePlace({
     id: "osm-node-2026369718",
@@ -3101,16 +2781,6 @@ export const demoPlaces: Place[] = [
     latitude: 43.30685,
     longitude: 5.400545,
     neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-way-76025669",
-    name: "Chez LOL",
-    latitude: 43.214647,
-    longitude: 5.535665,
-    neighborhood: "Littoral Sud",
     address: "Marseille",
     category: "Restaurant",
     criteria: []
@@ -3546,16 +3216,6 @@ export const demoPlaces: Place[] = [
     criteria: ["has_terrace"]
   }),
   makePlace({
-    id: "osm-way-154767785",
-    name: "Comme a la Maison",
-    latitude: 43.28545,
-    longitude: 5.517542,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-2261496753",
     name: "Comptoir des Docks",
     latitude: 43.308765,
@@ -3665,16 +3325,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Restaurant",
     criteria: ["has_terrace"]
-  }),
-  makePlace({
-    id: "osm-node-9048059735",
-    name: "Corton Beach",
-    latitude: 43.210703,
-    longitude: 5.544344,
-    neighborhood: "Littoral Sud",
-    address: "Avenue du Revestel, Marseille",
-    category: "Restaurant",
-    criteria: []
   }),
   makePlace({
     id: "osm-node-2059612345",
@@ -3804,16 +3454,6 @@ export const demoPlaces: Place[] = [
     neighborhood: "Le Panier",
     address: "Marseille",
     category: "Restaurant",
-    criteria: ["has_terrace"]
-  }),
-  makePlace({
-    id: "osm-node-5315174456",
-    name: "Dans les Arbres",
-    latitude: 43.27959,
-    longitude: 5.532545,
-    neighborhood: "Marseille",
-    address: "Place Farigoule - Chateau des Creissauds, Marseille",
-    category: "Bar",
     criteria: ["has_terrace"]
   }),
   makePlace({
@@ -3967,16 +3607,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-3451640394",
-    name: "Don Camillo",
-    latitude: 43.214661,
-    longitude: 5.535926,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-2059563926",
     name: "Donkey Kong",
     latitude: 43.293329,
@@ -4035,16 +3665,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Bar",
     criteria: []
-  }),
-  makePlace({
-    id: "osm-node-4870093284",
-    name: "Dragon de Jade",
-    latitude: 43.29187,
-    longitude: 5.569881,
-    neighborhood: "Marseille",
-    address: "1 Place Joseph Rau, Marseille",
-    category: "Restaurant",
-    criteria: ["has_terrace","late_opening"]
   }),
   makePlace({
     id: "osm-node-6529828436",
@@ -4157,16 +3777,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-13825491601",
-    name: "Easy Sushi",
-    latitude: 43.288476,
-    longitude: 5.524306,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-4087718751",
     name: "EasySushi",
     latitude: 43.288635,
@@ -4263,16 +3873,6 @@ export const demoPlaces: Place[] = [
     latitude: 43.293709,
     longitude: 5.388919,
     neighborhood: "Cours Julien",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-1836760286",
-    name: "El Sol",
-    latitude: 43.215004,
-    longitude: 5.537089,
-    neighborhood: "Littoral Sud",
     address: "Marseille",
     category: "Restaurant",
     criteria: []
@@ -4679,16 +4279,6 @@ export const demoPlaces: Place[] = [
     criteria: ["late_opening"]
   }),
   makePlace({
-    id: "osm-node-5303246602",
-    name: "Grains de siecle",
-    latitude: 43.292394,
-    longitude: 5.570106,
-    neighborhood: "Marseille",
-    address: "14 Boulevard Jean Jaures, Marseille",
-    category: "Bar",
-    criteria: ["has_terrace","late_opening"]
-  }),
-  makePlace({
     id: "osm-node-9357711873",
     name: "Gran Cafe",
     latitude: 43.271391,
@@ -4819,16 +4409,6 @@ export const demoPlaces: Place[] = [
     criteria: ["has_terrace"]
   }),
   makePlace({
-    id: "osm-way-158354259",
-    name: "Hai Dong",
-    latitude: 43.350088,
-    longitude: 5.465166,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-4087718757",
     name: "Hailo",
     latitude: 43.288696,
@@ -4930,16 +4510,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-11486784969",
-    name: "Hong Kong",
-    latitude: 43.290102,
-    longitude: 5.559718,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-4122998106",
     name: "Hong Kong 2",
     latitude: 43.309076,
@@ -4976,16 +4546,6 @@ export const demoPlaces: Place[] = [
     longitude: 5.399661,
     neighborhood: "Marseille",
     address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-3055471833",
-    name: "Hotel-Restaurant Le Clos des Aromes",
-    latitude: 43.216117,
-    longitude: 5.538036,
-    neighborhood: "Littoral Sud",
-    address: "10 Rue Abbe Paul Mouton, Marseille",
     category: "Restaurant",
     criteria: []
   }),
@@ -5068,16 +4628,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Restaurant",
     criteria: ["has_terrace"]
-  }),
-  makePlace({
-    id: "osm-way-481227553",
-    name: "Il etait une frite... Une fois !",
-    latitude: 43.309759,
-    longitude: 5.577041,
-    neighborhood: "Marseille",
-    address: "RD 96 Route de Napollon, Marseille",
-    category: "Restaurant",
-    criteria: []
   }),
   makePlace({
     id: "osm-node-12806270225",
@@ -5412,16 +4962,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-6742439553",
-    name: "Kitchenwok",
-    latitude: 43.340133,
-    longitude: 5.456478,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-2116957969",
     name: "Ko-Ishi",
     latitude: 43.292523,
@@ -5533,16 +5073,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-5137425921",
-    name: "L'Albizia",
-    latitude: 43.291738,
-    longitude: 5.570039,
-    neighborhood: "Marseille",
-    address: "11 Place Joseph Rau, Marseille",
-    category: "Restaurant",
-    criteria: ["has_terrace","late_opening"]
-  }),
-  makePlace({
     id: "osm-node-4528496653",
     name: "l'Alcyone",
     latitude: 43.298499,
@@ -5644,16 +5174,6 @@ export const demoPlaces: Place[] = [
     criteria: ["late_opening"]
   }),
   makePlace({
-    id: "osm-node-5264086752",
-    name: "L'Argilla - Restaurant L'Atelier Culinaire",
-    latitude: 43.291014,
-    longitude: 5.569994,
-    neighborhood: "Marseille",
-    address: "61 Rue de la Republique, Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-9634033731",
     name: "L'Aristocrate",
     latitude: 43.359028,
@@ -5751,16 +5271,6 @@ export const demoPlaces: Place[] = [
     neighborhood: "Marseille",
     address: "Marseille",
     category: "Bar",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-way-110311161",
-    name: "L'auberge du Merou",
-    latitude: 43.340014,
-    longitude: 5.258095,
-    neighborhood: "Le Panier",
-    address: "Marseille",
-    category: "Restaurant",
     criteria: []
   }),
   makePlace({
@@ -5904,16 +5414,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-5294044269",
-    name: "L'Entre deux",
-    latitude: 43.29279,
-    longitude: 5.56848,
-    neighborhood: "Marseille",
-    address: "12 Rue Rastegue, Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-4396418908",
     name: "L'Entre Pots",
     latitude: 43.300247,
@@ -5954,16 +5454,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-5294620837",
-    name: "L'Envie des Mets",
-    latitude: 43.292443,
-    longitude: 5.568712,
-    neighborhood: "Marseille",
-    address: "Rue Moussard, Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-6446013989",
     name: "L'Equinoxe",
     latitude: 43.254934,
@@ -5994,16 +5484,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-1260108004",
-    name: "L'Escale - Restaurant Niolon",
-    latitude: 43.339361,
-    longitude: 5.256367,
-    neighborhood: "Le Panier",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-8944460094",
     name: "L'Escale des Docks",
     latitude: 43.315884,
@@ -6029,26 +5509,6 @@ export const demoPlaces: Place[] = [
     latitude: 43.293477,
     longitude: 5.382931,
     neighborhood: "Cours Julien",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-3406079996",
-    name: "L'Escalier",
-    latitude: 43.215111,
-    longitude: 5.537172,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-6598752385",
-    name: "L'Escalier Restaurant",
-    latitude: 43.215259,
-    longitude: 5.537119,
-    neighborhood: "Littoral Sud",
     address: "Marseille",
     category: "Restaurant",
     criteria: []
@@ -6114,16 +5574,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-way-92607773",
-    name: "L'etoile d'Orient",
-    latitude: 43.292765,
-    longitude: 5.569076,
-    neighborhood: "Marseille",
-    address: "2 Rue Rastegue, Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-4109316466",
     name: "L'Etoile de Beyrouth",
     latitude: 43.28509,
@@ -6164,16 +5614,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-10139425611",
-    name: "L'hostellerie",
-    latitude: 43.335719,
-    longitude: 5.481921,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-4951205723",
     name: "L'Hyppocampe",
     latitude: 43.296529,
@@ -6202,16 +5642,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Restaurant",
     criteria: []
-  }),
-  makePlace({
-    id: "osm-node-4870093281",
-    name: "L'Inattendue",
-    latitude: 43.291852,
-    longitude: 5.569732,
-    neighborhood: "Marseille",
-    address: "8 Rue Hoche, Marseille",
-    category: "Restaurant",
-    criteria: ["late_opening"]
   }),
   makePlace({
     id: "osm-node-7012713782",
@@ -6250,16 +5680,6 @@ export const demoPlaces: Place[] = [
     longitude: 5.400723,
     neighborhood: "Marseille",
     address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-12157404801",
-    name: "L'instant...",
-    latitude: 43.368317,
-    longitude: 5.251076,
-    neighborhood: "Le Panier",
-    address: "68 Boulevard de la Carrairade, Marseille",
     category: "Restaurant",
     criteria: []
   }),
@@ -6392,16 +5812,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Restaurant",
     criteria: ["has_terrace"]
-  }),
-  makePlace({
-    id: "osm-node-3451666770",
-    name: "L'Oustau de la Mar",
-    latitude: 43.214923,
-    longitude: 5.537294,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
   }),
   makePlace({
     id: "osm-node-3045261155",
@@ -6564,16 +5974,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-9044846683",
-    name: "La Bonne Mere",
-    latitude: 43.215027,
-    longitude: 5.53829,
-    neighborhood: "Littoral Sud",
-    address: "19 Rue Michel Arnaud, Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-13461013301",
     name: "La Bottega",
     latitude: 43.287667,
@@ -6634,16 +6034,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-8852512684",
-    name: "La Brasserie de Cadolive",
-    latitude: 43.396331,
-    longitude: 5.544223,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-12794369364",
     name: "La Brasserie du Village",
     latitude: 43.28928,
@@ -6684,16 +6074,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-9622350381",
-    name: "La Calanque",
-    latitude: 43.343035,
-    longitude: 5.259469,
-    neighborhood: "Le Panier",
-    address: "6 Place de la Calanque, Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-way-219022411",
     name: "La calanque blanche",
     latitude: 43.22314,
@@ -6712,16 +6092,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Bar",
     criteria: ["has_terrace","has_wifi","late_opening"]
-  }),
-  makePlace({
-    id: "osm-node-1260108013",
-    name: "La Canne Bambou",
-    latitude: 43.339046,
-    longitude: 5.256521,
-    neighborhood: "Le Panier",
-    address: "Marseille",
-    category: "Bar",
-    criteria: []
   }),
   makePlace({
     id: "osm-node-621188166",
@@ -6833,16 +6203,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Restaurant",
     criteria: ["has_terrace"]
-  }),
-  makePlace({
-    id: "osm-node-5132940899",
-    name: "La Cave a Sushi",
-    latitude: 43.295232,
-    longitude: 5.568748,
-    neighborhood: "Marseille",
-    address: "22 Cours Voltaire, Marseille",
-    category: "Restaurant",
-    criteria: ["late_opening"]
   }),
   makePlace({
     id: "osm-node-6258990576",
@@ -6995,41 +6355,11 @@ export const demoPlaces: Place[] = [
     criteria: ["late_opening"]
   }),
   makePlace({
-    id: "osm-node-12292185156",
-    name: "La Defonce",
-    latitude: 43.214583,
-    longitude: 5.538031,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-way-67701825",
     name: "La Dilligence",
     latitude: 43.302728,
     longitude: 5.384837,
     neighborhood: "Longchamp",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-7331907274",
-    name: "La Diva",
-    latitude: 43.35201,
-    longitude: 5.475767,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-9789210036",
-    name: "La Fabrique",
-    latitude: 43.370115,
-    longitude: 5.251529,
-    neighborhood: "Le Panier",
     address: "Marseille",
     category: "Restaurant",
     criteria: []
@@ -7065,16 +6395,6 @@ export const demoPlaces: Place[] = [
     criteria: ["has_terrace"]
   }),
   makePlace({
-    id: "osm-node-2071827955",
-    name: "La Ferme",
-    latitude: 43.315546,
-    longitude: 5.537893,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-4374349386",
     name: "La Folle Epoque",
     latitude: 43.291123,
@@ -7102,26 +6422,6 @@ export const demoPlaces: Place[] = [
     neighborhood: "Marseille",
     address: "Marseille",
     category: "Bar",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-12868337602",
-    name: "La Fringale",
-    latitude: 43.214643,
-    longitude: 5.538072,
-    neighborhood: "Littoral Sud",
-    address: "5 Rue Pasteur, Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-3451666771",
-    name: "La Girandole",
-    latitude: 43.214631,
-    longitude: 5.537794,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
     criteria: []
   }),
   makePlace({
@@ -7225,26 +6525,6 @@ export const demoPlaces: Place[] = [
     criteria: ["has_terrace"]
   }),
   makePlace({
-    id: "osm-node-3990059702",
-    name: "La Loco",
-    latitude: 43.233874,
-    longitude: 5.552541,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-6830949224",
-    name: "La maison de fabiana",
-    latitude: 43.292857,
-    longitude: 5.566971,
-    neighborhood: "Marseille",
-    address: "8 Cours Barthelemy, Marseille",
-    category: "Restaurant",
-    criteria: ["has_terrace"]
-  }),
-  makePlace({
     id: "osm-node-8059204115",
     name: "La Maison des raviolis",
     latitude: 43.247515,
@@ -7273,16 +6553,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Bar",
     criteria: ["has_terrace","late_opening"]
-  }),
-  makePlace({
-    id: "osm-node-5204401264",
-    name: "La Maison Toscane",
-    latitude: 43.343138,
-    longitude: 5.465786,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
   }),
   makePlace({
     id: "osm-node-2001201532",
@@ -7405,16 +6675,6 @@ export const demoPlaces: Place[] = [
     criteria: ["late_opening"]
   }),
   makePlace({
-    id: "osm-node-11833530369",
-    name: "La Nonna D'Oro",
-    latitude: 43.214595,
-    longitude: 5.535708,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-7247225071",
     name: "La Ola",
     latitude: 43.29443,
@@ -7515,16 +6775,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-1260107875",
-    name: "La Pergola",
-    latitude: 43.339386,
-    longitude: 5.257589,
-    neighborhood: "Le Panier",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-8117427405",
     name: "La petite Italie",
     latitude: 43.359466,
@@ -7555,16 +6805,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-12294762839",
-    name: "La Pizzeria della Stazione",
-    latitude: 43.214504,
-    longitude: 5.539815,
-    neighborhood: "Littoral Sud",
-    address: "4 Rue Raphael Ponson, Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-2027947248",
     name: "La place des canailles",
     latitude: 43.306781,
@@ -7580,16 +6820,6 @@ export const demoPlaces: Place[] = [
     latitude: 43.360851,
     longitude: 5.313493,
     neighborhood: "Le Panier",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-12151909304",
-    name: "La Plage Bleue",
-    latitude: 43.205387,
-    longitude: 5.518731,
-    neighborhood: "Littoral Sud",
     address: "Marseille",
     category: "Restaurant",
     criteria: []
@@ -7613,26 +6843,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Restaurant",
     criteria: []
-  }),
-  makePlace({
-    id: "osm-way-75909483",
-    name: "La Presqu'ile",
-    latitude: 43.205602,
-    longitude: 5.518604,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-12176637803",
-    name: "La Quinta",
-    latitude: 43.362582,
-    longitude: 5.487413,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: ["has_terrace"]
   }),
   makePlace({
     id: "osm-node-7054970475",
@@ -7795,26 +7005,6 @@ export const demoPlaces: Place[] = [
     criteria: ["late_opening"]
   }),
   makePlace({
-    id: "osm-node-3451679604",
-    name: "La Stazione",
-    latitude: 43.214738,
-    longitude: 5.539516,
-    neighborhood: "Littoral Sud",
-    address: "39 Avenue Victor Hugo, Marseille",
-    category: "Restaurant",
-    criteria: ["has_terrace","late_opening"]
-  }),
-  makePlace({
-    id: "osm-node-3451716763",
-    name: "La Storia di Vincenzo",
-    latitude: 43.214449,
-    longitude: 5.537871,
-    neighborhood: "Littoral Sud",
-    address: "7 Quai des Baux, Marseille",
-    category: "Restaurant",
-    criteria: ["has_terrace"]
-  }),
-  makePlace({
     id: "osm-node-3535291153",
     name: "La Table Cinq",
     latitude: 43.302922,
@@ -7855,32 +7045,12 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-11634774560",
-    name: "La Table d'Emilie",
-    latitude: 43.25009,
-    longitude: 5.54648,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-2174798902",
     name: "La Table de Guy",
     latitude: 43.308392,
     longitude: 5.400097,
     neighborhood: "Marseille",
     address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-5132940904",
-    name: "La Table de Voltaire",
-    latitude: 43.294774,
-    longitude: 5.568762,
-    neighborhood: "Marseille",
-    address: "12 Cours Voltaire, Marseille",
     category: "Restaurant",
     criteria: []
   }),
@@ -8025,16 +7195,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-3451640395",
-    name: "La Vieille Auberge",
-    latitude: 43.214625,
-    longitude: 5.535797,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-4426912790",
     name: "La Vieille Pelle",
     latitude: 43.296476,
@@ -8055,16 +7215,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-2087471326",
-    name: "La Villa Madie",
-    latitude: 43.211102,
-    longitude: 5.544936,
-    neighborhood: "Littoral Sud",
-    address: "Avenue du Revestel, Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-5890752817",
     name: "La Voie Maltee",
     latitude: 43.294377,
@@ -8080,16 +7230,6 @@ export const demoPlaces: Place[] = [
     latitude: 43.296029,
     longitude: 5.36816,
     neighborhood: "Le Panier",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-3451705015",
-    name: "La Voute",
-    latitude: 43.214295,
-    longitude: 5.538153,
-    neighborhood: "Littoral Sud",
     address: "Marseille",
     category: "Restaurant",
     criteria: []
@@ -8217,16 +7357,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-3683681579",
-    name: "Le 3 Farfalle",
-    latitude: 43.291644,
-    longitude: 5.569957,
-    neighborhood: "Marseille",
-    address: "14 Place Joseph Rau, Marseille",
-    category: "Restaurant",
-    criteria: ["late_opening"]
-  }),
-  makePlace({
     id: "osm-node-1933746721",
     name: "Le 3/4",
     latitude: 43.29561,
@@ -8247,32 +7377,12 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-5204401265",
-    name: "Le 44",
-    latitude: 43.342684,
-    longitude: 5.468359,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-3391011714",
     name: "Le 444",
     latitude: 43.314725,
     longitude: 5.370886,
     neighborhood: "Le Panier",
     address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-11166413178",
-    name: "le 460 \"bistro burger\"",
-    latitude: 43.341496,
-    longitude: 5.473254,
-    neighborhood: "Marseille",
-    address: "460 Boulevard Henri Tasso, Marseille",
     category: "Restaurant",
     criteria: []
   }),
@@ -8285,26 +7395,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Restaurant",
     criteria: ["has_terrace"]
-  }),
-  makePlace({
-    id: "osm-node-12147576301",
-    name: "Le 568",
-    latitude: 43.367223,
-    longitude: 5.248602,
-    neighborhood: "Le Panier",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-7160896685",
-    name: "Le 66",
-    latitude: 43.287044,
-    longitude: 5.561625,
-    neighborhood: "Marseille",
-    address: "515 Avenue du 21 Aout 1944, Marseille",
-    category: "Restaurant",
-    criteria: ["late_opening"]
   }),
   makePlace({
     id: "osm-node-1885072443",
@@ -8325,16 +7415,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Restaurant",
     criteria: []
-  }),
-  makePlace({
-    id: "osm-node-5137416839",
-    name: "Le Balto",
-    latitude: 43.291747,
-    longitude: 5.569286,
-    neighborhood: "Marseille",
-    address: "32 Rue de la Republique, Marseille",
-    category: "Bar",
-    criteria: ["has_terrace"]
   }),
   makePlace({
     id: "osm-node-1871316010",
@@ -8467,26 +7547,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-4937607751",
-    name: "Le Bergerac",
-    latitude: 43.3798,
-    longitude: 5.351057,
-    neighborhood: "Le Panier",
-    address: "Marseille",
-    category: "Bar",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-6554684281",
-    name: "Le Bestouan",
-    latitude: 43.213134,
-    longitude: 5.531288,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-12371673784",
     name: "Le Bistingo",
     latitude: 43.253996,
@@ -8497,16 +7557,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-3057637533",
-    name: "Le Bistro",
-    latitude: 43.214066,
-    longitude: 5.534616,
-    neighborhood: "Littoral Sud",
-    address: "8 Avenue de l'Amiral Ganteaume, Marseille",
-    category: "Restaurant",
-    criteria: ["has_terrace"]
-  }),
-  makePlace({
     id: "osm-node-6465399785",
     name: "Le Bistro Du Panier",
     latitude: 43.296924,
@@ -8515,16 +7565,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Restaurant",
     criteria: []
-  }),
-  makePlace({
-    id: "osm-node-5858835897",
-    name: "Le Bistro'Quai",
-    latitude: 43.214741,
-    longitude: 5.537531,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: ["late_opening"]
   }),
   makePlace({
     id: "osm-node-4315409673",
@@ -8555,16 +7595,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Restaurant",
     criteria: []
-  }),
-  makePlace({
-    id: "osm-node-6036712072",
-    name: "Le Bistrot de Nino",
-    latitude: 43.214802,
-    longitude: 5.536434,
-    neighborhood: "Littoral Sud",
-    address: "1 Quai Jean Jacques Barthelemy, Marseille",
-    category: "Restaurant",
-    criteria: ["late_opening"]
   }),
   makePlace({
     id: "osm-node-4764606931",
@@ -8622,36 +7652,6 @@ export const demoPlaces: Place[] = [
     latitude: 43.292589,
     longitude: 5.371674,
     neighborhood: "Noailles",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-3451705016",
-    name: "Le Bonaparte",
-    latitude: 43.214808,
-    longitude: 5.538759,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-5269708960",
-    name: "Le Borsalino",
-    latitude: 43.292277,
-    longitude: 5.569262,
-    neighborhood: "Marseille",
-    address: "3 Boulevard Jean Jaures, Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-7749927822",
-    name: "Le bouchon",
-    latitude: 43.294622,
-    longitude: 5.567229,
-    neighborhood: "Marseille",
     address: "Marseille",
     category: "Restaurant",
     criteria: []
@@ -8737,16 +7737,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-3451666772",
-    name: "Le Canaille",
-    latitude: 43.214972,
-    longitude: 5.537168,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: ["has_terrace"]
-  }),
-  makePlace({
     id: "osm-node-9054339105",
     name: "Le Capados",
     latitude: 43.310751,
@@ -8827,16 +7817,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-1836768431",
-    name: "Le Cendrillon",
-    latitude: 43.213662,
-    longitude: 5.538874,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-4405959292",
     name: "Le Centuple",
     instagram_handle: "lecentuple",
@@ -8872,16 +7852,6 @@ export const demoPlaces: Place[] = [
     name: "Le Chalet",
     latitude: 43.293899,
     longitude: 5.35943,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-11473219169",
-    name: "Le chalet des pommiers",
-    latitude: 43.287942,
-    longitude: 5.544528,
     neighborhood: "Marseille",
     address: "Marseille",
     category: "Restaurant",
@@ -8926,17 +7896,6 @@ export const demoPlaces: Place[] = [
     address: "Route du Feu de la Calanque de Sormiou, Marseille",
     category: "Restaurant",
     criteria: ["has_terrace","late_opening","takes_reservations"]
-  }),
-  makePlace({
-    id: "osm-node-3451705018",
-    name: "Le Chaudron",
-    instagram_handle: "lechaudroncassis",
-    latitude: 43.214757,
-    longitude: 5.539298,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: ["late_opening"]
   }),
   makePlace({
     id: "osm-node-11297502568",
@@ -9019,16 +7978,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-8037536735",
-    name: "Le cochon terrible",
-    latitude: 43.356646,
-    longitude: 5.487964,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: ["has_wifi"]
-  }),
-  makePlace({
     id: "osm-node-5265363224",
     name: "Le Colbert",
     latitude: 43.299268,
@@ -9047,16 +7996,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Restaurant",
     criteria: ["has_terrace"]
-  }),
-  makePlace({
-    id: "osm-node-2030400907",
-    name: "Le Colysee",
-    latitude: 43.364334,
-    longitude: 5.497058,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: ["wheelchair_accessible"]
   }),
   makePlace({
     id: "osm-node-10963925838",
@@ -9129,16 +8068,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-3057637433",
-    name: "Le Comptoir du Naio",
-    latitude: 43.214219,
-    longitude: 5.534824,
-    neighborhood: "Littoral Sud",
-    address: "6 Quai Carnot, Marseille",
-    category: "Restaurant",
-    criteria: ["has_terrace"]
-  }),
-  makePlace({
     id: "osm-node-3638685183",
     name: "Le Comptoir Dugommier",
     latitude: 43.298531,
@@ -9175,16 +8104,6 @@ export const demoPlaces: Place[] = [
     longitude: 5.406478,
     neighborhood: "Littoral Sud",
     address: "13 Boulevard Paul Claudel, Marseille",
-    category: "Bar",
-    criteria: ["has_terrace"]
-  }),
-  makePlace({
-    id: "osm-node-5303348841",
-    name: "Le Coquet Matthieu",
-    latitude: 43.292493,
-    longitude: 5.566918,
-    neighborhood: "Marseille",
-    address: "Marseille",
     category: "Bar",
     criteria: ["has_terrace"]
   }),
@@ -9335,16 +8254,6 @@ export const demoPlaces: Place[] = [
     longitude: 5.382911,
     neighborhood: "Marseille",
     address: "311 Rue Paradis, Marseille",
-    category: "Bar",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-3451705019",
-    name: "Le Delphin",
-    latitude: 43.214281,
-    longitude: 5.538213,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
     category: "Bar",
     criteria: []
   }),
@@ -9529,26 +8438,6 @@ export const demoPlaces: Place[] = [
     criteria: ["has_terrace"]
   }),
   makePlace({
-    id: "osm-node-13252460759",
-    name: "Le Flint",
-    latitude: 43.386158,
-    longitude: 5.35886,
-    neighborhood: "Le Panier",
-    address: "Marseille",
-    category: "Bar",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-5137416832",
-    name: "Le Florentin",
-    latitude: 43.293555,
-    longitude: 5.568005,
-    neighborhood: "Marseille",
-    address: "14 Cours Marechal Foch, Marseille",
-    category: "Restaurant",
-    criteria: ["late_opening"]
-  }),
-  makePlace({
     id: "osm-node-5181596454",
     name: "Le Fontenoy Bar Tabac",
     latitude: 43.282303,
@@ -9577,16 +8466,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Bar",
     criteria: ["has_terrace"]
-  }),
-  makePlace({
-    id: "osm-node-12335303777",
-    name: "Le Futuria",
-    latitude: 43.394287,
-    longitude: 5.238455,
-    neighborhood: "Le Panier",
-    address: "Marseille",
-    category: "Bar",
-    criteria: []
   }),
   makePlace({
     id: "osm-node-11598061123",
@@ -9649,16 +8528,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-1659144183",
-    name: "Le Golfe",
-    latitude: 43.214545,
-    longitude: 5.53534,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Bar",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-1490551264",
     name: "Le Grain de Sable",
     latitude: 43.299376,
@@ -9679,16 +8548,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-3451666774",
-    name: "Le Grand Bleu",
-    latitude: 43.214645,
-    longitude: 5.537593,
-    neighborhood: "Littoral Sud",
-    address: "12 Quai des Baux, Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-6860035445",
     name: "Le Grand Comptoir de Paris",
     latitude: 43.296471,
@@ -9697,16 +8556,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Restaurant",
     criteria: ["has_terrace"]
-  }),
-  makePlace({
-    id: "osm-way-76017992",
-    name: "Le Grand Large",
-    latitude: 43.213021,
-    longitude: 5.53814,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: ["has_terrace","takes_reservations"]
   }),
   makePlace({
     id: "osm-node-5534080781",
@@ -9747,16 +8596,6 @@ export const demoPlaces: Place[] = [
     address: "2 Boulevard Jacques Saade Quai de la Joliette, Marseille",
     category: "Restaurant",
     criteria: ["has_terrace","late_opening"]
-  }),
-  makePlace({
-    id: "osm-node-11491756669",
-    name: "Le Jade",
-    latitude: 43.28302,
-    longitude: 5.532824,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
   }),
   makePlace({
     id: "osm-node-2841931137",
@@ -9815,16 +8654,6 @@ export const demoPlaces: Place[] = [
     longitude: 5.378702,
     neighborhood: "Marseille",
     address: "114 Rue Paradis, Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-way-165115266",
-    name: "Le K",
-    latitude: 43.361636,
-    longitude: 5.237686,
-    neighborhood: "Le Panier",
-    address: "Marseille",
     category: "Restaurant",
     criteria: []
   }),
@@ -9909,16 +8738,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-4300895446",
-    name: "Le Marigny",
-    latitude: 43.292562,
-    longitude: 5.568012,
-    neighborhood: "Marseille",
-    address: "5 Rue de la Republique, Marseille",
-    category: "Bar",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-4764592402",
     name: "Le Marlin",
     latitude: 43.293143,
@@ -9964,16 +8783,6 @@ export const demoPlaces: Place[] = [
     latitude: 43.29393,
     longitude: 5.382982,
     neighborhood: "Cours Julien",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-way-154761086",
-    name: "Le Meltin'Pot",
-    latitude: 43.282049,
-    longitude: 5.525298,
-    neighborhood: "Marseille",
     address: "Marseille",
     category: "Restaurant",
     criteria: []
@@ -10184,16 +8993,6 @@ export const demoPlaces: Place[] = [
     latitude: 43.245518,
     longitude: 5.373876,
     neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-11486778470",
-    name: "Le Nippon",
-    latitude: 43.290015,
-    longitude: 5.559631,
-    neighborhood: "Marseille",
     address: "Marseille",
     category: "Restaurant",
     criteria: []
@@ -10415,16 +9214,6 @@ export const demoPlaces: Place[] = [
     longitude: 5.352208,
     neighborhood: "Marseille",
     address: "56 Corniche du President John Fitzgerald Kennedy, Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-1836768644",
-    name: "Le Perroquet",
-    latitude: 43.213521,
-    longitude: 5.538749,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
     category: "Restaurant",
     criteria: []
   }),
@@ -10669,16 +9458,6 @@ export const demoPlaces: Place[] = [
     criteria: ["wheelchair_accessible"]
   }),
   makePlace({
-    id: "osm-node-12294762841",
-    name: "Le Poisson Rouge",
-    latitude: 43.214219,
-    longitude: 5.539016,
-    neighborhood: "Littoral Sud",
-    address: "Impasse Farine, Marseille",
-    category: "Restaurant",
-    criteria: ["has_terrace"]
-  }),
-  makePlace({
     id: "osm-node-12388262031",
     name: "le PonPon",
     latitude: 43.302942,
@@ -10687,16 +9466,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Bar",
     criteria: ["late_opening"]
-  }),
-  makePlace({
-    id: "osm-node-3451705021",
-    name: "Le Port",
-    latitude: 43.214316,
-    longitude: 5.538093,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Bar",
-    criteria: []
   }),
   makePlace({
     id: "osm-node-8071999799",
@@ -10809,16 +9578,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-3683681582",
-    name: "Le regence",
-    latitude: 43.294406,
-    longitude: 5.567908,
-    neighborhood: "Marseille",
-    address: "1 Cours Voltaire, Marseille",
-    category: "Bar",
-    criteria: ["has_terrace","late_opening"]
-  }),
-  makePlace({
     id: "osm-node-4235395049",
     name: "Le Regent",
     latitude: 43.294324,
@@ -10847,16 +9606,6 @@ export const demoPlaces: Place[] = [
     address: "49 Avenue du Prado, Marseille",
     category: "Restaurant",
     criteria: ["has_terrace","late_opening"]
-  }),
-  makePlace({
-    id: "osm-way-73294767",
-    name: "Le Relais de Passe-Temps",
-    latitude: 43.323845,
-    longitude: 5.517541,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
   }),
   makePlace({
     id: "osm-way-70050867",
@@ -10899,16 +9648,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-12292185158",
-    name: "Le Romarin",
-    latitude: 43.214613,
-    longitude: 5.538713,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-2958176921",
     name: "Le Rostand",
     latitude: 43.287453,
@@ -10917,16 +9656,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Restaurant",
     criteria: ["late_opening"]
-  }),
-  makePlace({
-    id: "osm-node-9789210038",
-    name: "Le Rovenain",
-    latitude: 43.370403,
-    longitude: 5.252412,
-    neighborhood: "Le Panier",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
   }),
   makePlace({
     id: "osm-node-12693771548",
@@ -10996,16 +9725,6 @@ export const demoPlaces: Place[] = [
     neighborhood: "Cours Julien",
     address: "Marseille",
     category: "Bar",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-10879517281",
-    name: "Le Salon Provencal",
-    latitude: 43.335672,
-    longitude: 5.482218,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
     criteria: []
   }),
   makePlace({
@@ -11137,16 +9856,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Bar",
     criteria: []
-  }),
-  makePlace({
-    id: "osm-node-5294387640",
-    name: "Le Taj",
-    latitude: 43.284569,
-    longitude: 5.547087,
-    neighborhood: "Marseille",
-    address: "2 Avenue des Platanes, Marseille",
-    category: "Restaurant",
-    criteria: ["has_terrace","late_opening"]
   }),
   makePlace({
     id: "osm-node-6878567283",
@@ -11339,16 +10048,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-5132958103",
-    name: "Le Voltaire",
-    latitude: 43.295068,
-    longitude: 5.568034,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Bar",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-7203958270",
     name: "Le Week End",
     latitude: 43.283989,
@@ -11357,16 +10056,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Bar",
     criteria: []
-  }),
-  makePlace({
-    id: "osm-node-5137416841",
-    name: "Le Week-End",
-    latitude: 43.293367,
-    longitude: 5.567354,
-    neighborhood: "Marseille",
-    address: "11 Cours Marechal Foch, Marseille",
-    category: "Bar",
-    criteria: ["has_terrace"]
   }),
   makePlace({
     id: "osm-node-3182902879",
@@ -11404,16 +10093,6 @@ export const demoPlaces: Place[] = [
     latitude: 43.299652,
     longitude: 5.382828,
     neighborhood: "Longchamp",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-11473209170",
-    name: "Les 2 z'elles",
-    latitude: 43.288002,
-    longitude: 5.544101,
-    neighborhood: "Marseille",
     address: "Marseille",
     category: "Restaurant",
     criteria: []
@@ -11519,16 +10198,6 @@ export const demoPlaces: Place[] = [
     criteria: ["wheelchair_accessible"]
   }),
   makePlace({
-    id: "osm-way-75909637",
-    name: "Les Belles Canailles",
-    latitude: 43.2117,
-    longitude: 5.529546,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-6844020825",
     name: "Les BerThoM",
     latitude: 43.292369,
@@ -11569,26 +10238,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-13659307583",
-    name: "Les Caves du Port",
-    latitude: 43.215293,
-    longitude: 5.536982,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Bar",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-12134105198",
-    name: "Les Collegues",
-    latitude: 43.23112,
-    longitude: 5.554218,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-1493475298",
     name: "Les Dauphins",
     latitude: 43.274853,
@@ -11597,26 +10246,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Restaurant",
     criteria: []
-  }),
-  makePlace({
-    id: "osm-node-5263997199",
-    name: "Les Delices d'Orient",
-    latitude: 43.292268,
-    longitude: 5.569865,
-    neighborhood: "Marseille",
-    address: "8 Boulevard Jean Jaures, Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-7617210780",
-    name: "Les delices de Babylone",
-    latitude: 43.292468,
-    longitude: 5.565589,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: ["late_opening"]
   }),
   makePlace({
     id: "osm-node-12794933123",
@@ -11649,26 +10278,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-5294421931",
-    name: "Les enfants gates",
-    latitude: 43.28681,
-    longitude: 5.531974,
-    neighborhood: "Marseille",
-    address: "2435 Route de la Legion, Marseille",
-    category: "Restaurant",
-    criteria: ["has_terrace","late_opening"]
-  }),
-  makePlace({
-    id: "osm-node-3451705022",
-    name: "Les Frangines",
-    latitude: 43.214806,
-    longitude: 5.539258,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-1933729139",
     name: "Les Gagas",
     latitude: 43.295164,
@@ -11695,16 +10304,6 @@ export const demoPlaces: Place[] = [
     longitude: 5.363976,
     neighborhood: "Le Panier",
     address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-way-72766882",
-    name: "Les Jardins d'Asie",
-    latitude: 43.34497,
-    longitude: 5.486574,
-    neighborhood: "Marseille",
-    address: "593 Avenue du General Leclerc, Marseille",
     category: "Restaurant",
     criteria: []
   }),
@@ -12079,16 +10678,6 @@ export const demoPlaces: Place[] = [
     criteria: ["late_opening"]
   }),
   makePlace({
-    id: "osm-node-5294488488",
-    name: "Loberge Resto Club",
-    latitude: 43.288064,
-    longitude: 5.574956,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: ["late_opening"]
-  }),
-  makePlace({
     id: "osm-node-9571635719",
     name: "Loch Ness",
     latitude: 43.29386,
@@ -12206,16 +10795,6 @@ export const demoPlaces: Place[] = [
     longitude: 5.382863,
     neighborhood: "Cours Julien",
     address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-4870093285",
-    name: "Luzumaki Artisan sushi",
-    latitude: 43.29249,
-    longitude: 5.570155,
-    neighborhood: "Marseille",
-    address: "21 Boulevard Jean Jaures, Marseille",
     category: "Restaurant",
     criteria: []
   }),
@@ -12455,16 +11034,6 @@ export const demoPlaces: Place[] = [
     latitude: 43.292616,
     longitude: 5.372097,
     neighborhood: "Noailles",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-3451679606",
-    name: "Marco Polo",
-    latitude: 43.21504,
-    longitude: 5.536952,
-    neighborhood: "Littoral Sud",
     address: "Marseille",
     category: "Restaurant",
     criteria: []
@@ -12721,16 +11290,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-5303380984",
-    name: "Mezouar Abdelkader",
-    latitude: 43.291835,
-    longitude: 5.568186,
-    neighborhood: "Marseille",
-    address: "8 Rue Peypagan, Marseille",
-    category: "Bar",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-11389521740",
     name: "Mia Nonna",
     latitude: 43.284995,
@@ -12799,16 +11358,6 @@ export const demoPlaces: Place[] = [
     address: "57 Boulevard de Strasbourg, Marseille",
     category: "Restaurant",
     criteria: ["late_opening"]
-  }),
-  makePlace({
-    id: "osm-node-2937784257",
-    name: "Monsieur Brun",
-    latitude: 43.214863,
-    longitude: 5.536583,
-    neighborhood: "Littoral Sud",
-    address: "2 Quai Calendal, Marseille",
-    category: "Restaurant",
-    criteria: ["has_terrace"]
   }),
   makePlace({
     id: "osm-node-6723039744",
@@ -13001,16 +11550,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-4870093286",
-    name: "Nikki Sushi",
-    latitude: 43.2939,
-    longitude: 5.56805,
-    neighborhood: "Marseille",
-    address: "16 Cours Marechal Foch, Marseille",
-    category: "Restaurant",
-    criteria: ["late_opening"]
-  }),
-  makePlace({
     id: "osm-node-5340041609",
     name: "Nikki Sushi",
     latitude: 43.2962,
@@ -13160,16 +11699,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Restaurant",
     criteria: []
-  }),
-  makePlace({
-    id: "osm-node-9047228015",
-    name: "O REV",
-    latitude: 43.214855,
-    longitude: 5.538354,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: ["late_opening"]
   }),
   makePlace({
     id: "osm-node-5822477586",
@@ -13534,16 +12063,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-7749927817",
-    name: "Paula",
-    latitude: 43.292074,
-    longitude: 5.568628,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-4764603324",
     name: "Paule et Kopa",
     latitude: 43.292207,
@@ -13664,30 +12183,10 @@ export const demoPlaces: Place[] = [
     criteria: ["late_opening"]
   }),
   makePlace({
-    id: "osm-node-1951024439",
-    name: "Pizz'Adore",
-    latitude: 43.355727,
-    longitude: 5.486818,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-4922701766",
     name: "Pizza 26",
     latitude: 43.297573,
     longitude: 5.397561,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-5204378430",
-    name: "Pizza Bea",
-    latitude: 43.343063,
-    longitude: 5.469199,
     neighborhood: "Marseille",
     address: "Marseille",
     category: "Restaurant",
@@ -13759,16 +12258,6 @@ export const demoPlaces: Place[] = [
     latitude: 43.285059,
     longitude: 5.389852,
     neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-5976725358",
-    name: "Pizza Pasta",
-    latitude: 43.255884,
-    longitude: 5.566443,
-    neighborhood: "Littoral Sud",
     address: "Marseille",
     category: "Restaurant",
     criteria: []
@@ -13904,26 +12393,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-12250968788",
-    name: "Pizzeria le Mail",
-    latitude: 43.390688,
-    longitude: 5.23675,
-    neighborhood: "Le Panier",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-3516272052",
-    name: "Pizzeria Roma",
-    latitude: 43.289117,
-    longitude: 5.572885,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-9697856683",
     name: "Placette",
     latitude: 43.297263,
@@ -13982,16 +12451,6 @@ export const demoPlaces: Place[] = [
     address: "245 Corniche du President John Fitzgerald Kennedy, Marseille",
     category: "Restaurant",
     criteria: []
-  }),
-  makePlace({
-    id: "osm-node-9051015144",
-    name: "Poissonnerie Laurent",
-    latitude: 43.214723,
-    longitude: 5.536197,
-    neighborhood: "Littoral Sud",
-    address: "5 Quai Jean Jacques Barthelemy, Marseille",
-    category: "Restaurant",
-    criteria: ["has_terrace","late_opening"]
   }),
   makePlace({
     id: "osm-node-2375892960",
@@ -14114,16 +12573,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-11817252886",
-    name: "Pure Braise",
-    latitude: 43.333601,
-    longitude: 5.481437,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-7859266729",
     name: "Quanta Cafe",
     latitude: 43.359644,
@@ -14224,16 +12673,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-5331378895",
-    name: "Restauran farafina",
-    latitude: 43.309865,
-    longitude: 5.534046,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: ["has_terrace","late_opening"]
-  }),
-  makePlace({
     id: "osm-node-1797919718",
     name: "Restaurant \"Le Gepetto\"",
     latitude: 43.257434,
@@ -14314,16 +12753,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-way-154749546",
-    name: "Restaurant De La Gare",
-    latitude: 43.28351,
-    longitude: 5.514754,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: ["late_opening"]
-  }),
-  makePlace({
     id: "osm-node-5188583893",
     name: "Restaurant de la Renaissance",
     latitude: 43.281527,
@@ -14364,26 +12793,6 @@ export const demoPlaces: Place[] = [
     criteria: ["has_terrace"]
   }),
   makePlace({
-    id: "osm-node-5329642870",
-    name: "Restaurant la cadette",
-    latitude: 43.294155,
-    longitude: 5.565336,
-    neighborhood: "Marseille",
-    address: "120 Avenue du 8 Mai, Marseille",
-    category: "Restaurant",
-    criteria: ["has_terrace"]
-  }),
-  makePlace({
-    id: "osm-node-5329616458",
-    name: "Restaurant la rosee",
-    latitude: 43.292464,
-    longitude: 5.565422,
-    neighborhood: "Marseille",
-    address: "120 Avenue Loulou Delfieu, Marseille",
-    category: "Restaurant",
-    criteria: ["late_opening"]
-  }),
-  makePlace({
     id: "osm-node-4581974105",
     name: "Restaurant la Rouviere",
     latitude: 43.253184,
@@ -14394,16 +12803,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-5329637510",
-    name: "Restaurant le Mande",
-    latitude: 43.293614,
-    longitude: 5.563822,
-    neighborhood: "Marseille",
-    address: "115 Passerelle d'Acces du Parking du McDonald's, Marseille",
-    category: "Restaurant",
-    criteria: ["has_terrace","late_opening"]
-  }),
-  makePlace({
     id: "osm-node-13287768201",
     name: "Restaurant Le Palmier",
     latitude: 43.36077,
@@ -14412,26 +12811,6 @@ export const demoPlaces: Place[] = [
     address: "14 Rue Martial Reynaud, Marseille",
     category: "Restaurant",
     criteria: ["late_opening"]
-  }),
-  makePlace({
-    id: "osm-node-13659307586",
-    name: "Restaurant le Patio",
-    latitude: 43.215477,
-    longitude: 5.536787,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-9730062736",
-    name: "Restaurant les Sept Themes",
-    latitude: 43.39816,
-    longitude: 5.365426,
-    neighborhood: "Le Panier",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
   }),
   makePlace({
     id: "osm-node-1823113429",
@@ -14484,16 +12863,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-way-287451794",
-    name: "Restaurant Scolaire",
-    latitude: 43.385283,
-    longitude: 5.577154,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-way-317206803",
     name: "Restaurant scolaire de l'ORT",
     latitude: 43.278246,
@@ -14509,16 +12878,6 @@ export const demoPlaces: Place[] = [
     latitude: 43.308377,
     longitude: 5.437036,
     neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-3486984363",
-    name: "Restaurant UCPA (niv. -1)",
-    latitude: 43.338513,
-    longitude: 5.257331,
-    neighborhood: "Le Panier",
     address: "Marseille",
     category: "Restaurant",
     criteria: []
@@ -14875,16 +13234,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-12292185155",
-    name: "Saveurs Latines",
-    latitude: 43.214453,
-    longitude: 5.538858,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-11971481432",
     name: "Seik",
     latitude: 43.292692,
@@ -14941,16 +13290,6 @@ export const demoPlaces: Place[] = [
     longitude: 5.374241,
     neighborhood: "Noailles",
     address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-12114406601",
-    name: "Shin Ramen",
-    latitude: 43.291744,
-    longitude: 5.562381,
-    neighborhood: "Marseille",
-    address: "Avenue de Laute, Marseille",
     category: "Restaurant",
     criteria: []
   }),
@@ -15040,16 +13379,6 @@ export const demoPlaces: Place[] = [
     latitude: 43.276697,
     longitude: 5.419254,
     neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-13659307593",
-    name: "Snack Le Repaire",
-    latitude: 43.213648,
-    longitude: 5.539462,
-    neighborhood: "Littoral Sud",
     address: "Marseille",
     category: "Restaurant",
     criteria: []
@@ -15418,16 +13747,6 @@ export const demoPlaces: Place[] = [
     criteria: ["has_terrace","late_opening"]
   }),
   makePlace({
-    id: "osm-node-3194279756",
-    name: "Sushi Sashimi",
-    latitude: 43.345262,
-    longitude: 5.461209,
-    neighborhood: "Marseille",
-    address: "12 Avenue Frederic Chevillon, Marseille",
-    category: "Restaurant",
-    criteria: ["late_opening","wheelchair_accessible"]
-  }),
-  makePlace({
     id: "osm-node-8866927530",
     name: "Sushi street cafe",
     latitude: 43.289169,
@@ -15458,16 +13777,6 @@ export const demoPlaces: Place[] = [
     criteria: ["late_opening"]
   }),
   makePlace({
-    id: "osm-node-8426660399",
-    name: "Tak'away",
-    latitude: 43.214839,
-    longitude: 5.539447,
-    neighborhood: "Littoral Sud",
-    address: "1 Avenue Docteur Emmanuel Agostini, Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-4535006489",
     name: "Tako-San",
     latitude: 43.299615,
@@ -15476,16 +13785,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Restaurant",
     criteria: []
-  }),
-  makePlace({
-    id: "osm-node-3369399041",
-    name: "Tan A",
-    latitude: 43.283034,
-    longitude: 5.533368,
-    neighborhood: "Marseille",
-    address: "1 Avenue Alice, Marseille",
-    category: "Restaurant",
-    criteria: ["late_opening"]
   }),
   makePlace({
     id: "osm-node-9054436502",
@@ -15533,16 +13832,6 @@ export const demoPlaces: Place[] = [
     latitude: 43.292823,
     longitude: 5.375176,
     neighborhood: "Noailles",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-11014301206",
-    name: "Terroir et maree",
-    latitude: 43.223062,
-    longitude: 5.543938,
-    neighborhood: "Littoral Sud",
     address: "Marseille",
     category: "Restaurant",
     criteria: []
@@ -15669,16 +13958,6 @@ export const demoPlaces: Place[] = [
     criteria: ["has_terrace","wheelchair_accessible"]
   }),
   makePlace({
-    id: "osm-node-5272054373",
-    name: "The Red Lion",
-    latitude: 43.294325,
-    longitude: 5.559264,
-    neighborhood: "Marseille",
-    address: "252 Avenue Antide Boyer, Marseille",
-    category: "Bar",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-node-7058016111",
     name: "The Red Lion",
     latitude: 43.292079,
@@ -15714,16 +13993,6 @@ export const demoPlaces: Place[] = [
     latitude: 43.299495,
     longitude: 5.388506,
     neighborhood: "Longchamp",
-    address: "Marseille",
-    category: "Bar",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-13718046126",
-    name: "Tiki Bar",
-    latitude: 43.297729,
-    longitude: 5.536615,
-    neighborhood: "Marseille",
     address: "Marseille",
     category: "Bar",
     criteria: []
@@ -15767,16 +14036,6 @@ export const demoPlaces: Place[] = [
     address: "Marseille",
     category: "Restaurant",
     criteria: []
-  }),
-  makePlace({
-    id: "osm-node-10691365143",
-    name: "Train Inc Cafe",
-    latitude: 43.340234,
-    longitude: 5.256917,
-    neighborhood: "Le Panier",
-    address: "Marseille",
-    category: "Bar",
-    criteria: ["wheelchair_accessible"]
   }),
   makePlace({
     id: "osm-node-11263427175",
@@ -15886,16 +14145,6 @@ export const demoPlaces: Place[] = [
     longitude: 5.383939,
     neighborhood: "Cours Julien",
     address: "2 Rue Pastoret, Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-node-5137416837",
-    name: "Tutti Quanti",
-    latitude: 43.291602,
-    longitude: 5.569111,
-    neighborhood: "Marseille",
-    address: "50 Rue de la Republique, Marseille",
     category: "Restaurant",
     criteria: []
   }),
@@ -16080,36 +14329,6 @@ export const demoPlaces: Place[] = [
     criteria: []
   }),
   makePlace({
-    id: "osm-node-12297436481",
-    name: "Victoria",
-    latitude: 43.214526,
-    longitude: 5.539161,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Bar",
-    criteria: ["has_terrace"]
-  }),
-  makePlace({
-    id: "osm-way-154765681",
-    name: "Viet Xua",
-    latitude: 43.281056,
-    longitude: 5.518148,
-    neighborhood: "Marseille",
-    address: "176 Boulevard Voltaire, Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
-    id: "osm-way-154761608",
-    name: "Villa Collomba",
-    latitude: 43.286782,
-    longitude: 5.514836,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: []
-  }),
-  makePlace({
     id: "osm-way-153532648",
     name: "Villa Mont Liban",
     latitude: 43.251618,
@@ -16250,16 +14469,6 @@ export const demoPlaces: Place[] = [
     criteria: ["wheelchair_accessible"]
   }),
   makePlace({
-    id: "osm-node-3057637134",
-    name: "Yacht Club de Cassis",
-    latitude: 43.213204,
-    longitude: 5.535582,
-    neighborhood: "Littoral Sud",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: ["has_wifi"]
-  }),
-  makePlace({
     id: "osm-node-12386231670",
     name: "Yafel",
     latitude: 43.292211,
@@ -16379,26 +14588,6 @@ export const demoPlaces: Place[] = [
     address: "134 Rue Paradis, Marseille",
     category: "Restaurant",
     criteria: []
-  }),
-  makePlace({
-    id: "osm-node-5132958111",
-    name: "Zeu Burgers",
-    latitude: 43.294899,
-    longitude: 5.567586,
-    neighborhood: "Marseille",
-    address: "5 Rue Colonel de Roux, Marseille",
-    category: "Restaurant",
-    criteria: ["late_opening"]
-  }),
-  makePlace({
-    id: "osm-node-7749927831",
-    name: "Zia Concetta",
-    latitude: 43.291815,
-    longitude: 5.569949,
-    neighborhood: "Marseille",
-    address: "Marseille",
-    category: "Restaurant",
-    criteria: ["has_terrace"]
   }),
   makePlace({
     id: "osm-node-12677212834",

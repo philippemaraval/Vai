@@ -1,17 +1,30 @@
 import { X } from 'lucide-react';
 import { criteriaDefinitions, type CriteriaKey } from '../lib/criteria';
+import type { Neighborhood } from '../lib/types';
 
 type FilterDrawerProps = {
   open: boolean;
   activeFilters: CriteriaKey[];
+  neighborhoods: Neighborhood[];
+  selectedNeighborhoodId?: string;
   onToggleFilter: (filter: CriteriaKey) => void;
+  onSelectNeighborhood: (id?: string) => void;
   onClear: () => void;
   onClose: () => void;
 };
 
 const groups = ['Essentiels', 'Ambiance', 'Pratique', 'Accessibilite'] as const;
 
-export function FilterDrawer({ open, activeFilters, onToggleFilter, onClear, onClose }: FilterDrawerProps) {
+export function FilterDrawer({
+  open,
+  activeFilters,
+  neighborhoods,
+  selectedNeighborhoodId,
+  onToggleFilter,
+  onSelectNeighborhood,
+  onClear,
+  onClose
+}: FilterDrawerProps) {
   return (
     <div className={`drawer-backdrop ${open ? 'open' : ''}`} aria-hidden={!open}>
       <section className="filter-drawer" aria-label="Tous les filtres">
@@ -25,6 +38,18 @@ export function FilterDrawer({ open, activeFilters, onToggleFilter, onClear, onC
           </button>
         </div>
         <div className="drawer-filter-grid">
+          <fieldset className="filter-group">
+            <legend>Quartiers</legend>
+            {neighborhoods.map((neighborhood) => (
+              <button
+                key={neighborhood.id}
+                className={selectedNeighborhoodId === neighborhood.id ? 'chip active' : 'chip'}
+                onClick={() => onSelectNeighborhood(selectedNeighborhoodId === neighborhood.id ? undefined : neighborhood.id)}
+              >
+                {neighborhood.name}
+              </button>
+            ))}
+          </fieldset>
           {groups.map((group) => (
             <fieldset key={group} className="filter-group">
               <legend>{group}</legend>

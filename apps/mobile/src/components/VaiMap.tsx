@@ -104,23 +104,27 @@ export function VaiMap({
 
     if (neighborhoodLayerRef.current) {
       map.removeLayer(neighborhoodLayerRef.current);
+      neighborhoodLayerRef.current = null;
+    }
+
+    if (!selectedNeighborhoodId) {
+      return;
     }
 
     const layer = L.geoJSON(
-      neighborhoods.map((neighborhood) => ({
-        type: 'Feature',
-        properties: { id: neighborhood.id, name: neighborhood.name },
-        geometry: neighborhood.polygon
-      })) as GeoJSON.Feature[],
+      neighborhoods
+        .filter((neighborhood) => neighborhood.id === selectedNeighborhoodId)
+        .map((neighborhood) => ({
+          type: 'Feature',
+          properties: { id: neighborhood.id, name: neighborhood.name },
+          geometry: neighborhood.polygon
+        })) as GeoJSON.Feature[],
       {
-        style: (feature) => {
-          const isSelected = feature?.properties?.id === selectedNeighborhoodId;
-          return {
-            color: isSelected ? '#E2725B' : '#104F75',
-            fillColor: isSelected ? '#E2725B' : '#D4A373',
-            fillOpacity: isSelected ? 0.22 : 0.08,
-            weight: isSelected ? 4 : 2
-          };
+        style: {
+          color: '#E2725B',
+          fillColor: '#E2725B',
+          fillOpacity: 0.22,
+          weight: 4
         },
         onEachFeature: (feature, layerItem) => {
           layerItem.on('click', () => onSelectNeighborhood(feature.properties.id));
