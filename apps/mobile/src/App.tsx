@@ -1,35 +1,34 @@
-import { SlidersHorizontal, UserRound } from 'lucide-react';
+import { Heart, ListPlus, MapPinned, Search, SlidersHorizontal, UserRound } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { AdminBackOffice } from './components/AdminBackOffice';
 import { BottomSheet } from './components/BottomSheet';
 import { FilterDrawer } from './components/FilterDrawer';
+import { ProfilePanel } from './components/ProfilePanel';
+import { SubmissionPanel } from './components/SubmissionPanel';
 import { VaiMap } from './components/VaiMap';
+import { criteriaLabels, quickCriteriaKeys, type CriteriaKey } from './lib/criteria';
 import { demoNeighborhoods, demoPlaces } from './lib/demoData';
 import { hasSupabaseConfig, supabase } from './lib/supabase';
 import type { Place } from './lib/types';
 
-const quickFilters = ['Terrasse', 'Diffusion OM', 'CB sans minimum', 'Ouvert tard', 'Groupes', 'Wi-Fi'];
+type AppView = 'map' | 'profile' | 'submit';
+type SheetState = 'hidden' | 'peek' | 'expanded';
 
-function criterionMatches(place: Place, filter: string) {
-  const mapping: Record<string, keyof Place['criteria']> = {
-    Terrasse: 'has_terrace',
-    'Diffusion OM': 'broadcasts_om',
-    'CB sans minimum': 'allows_cb_no_minimum',
-    'Ouvert tard': 'late_opening',
-    Groupes: 'good_for_groups',
-    'Wi-Fi': 'has_wifi'
-  };
-  return place.criteria[mapping[filter]];
+function criterionMatches(place: Place, filter: CriteriaKey) {
+  return place.criteria[filter];
 }
 
 export function App() {
   const [selectedPlace, setSelectedPlace] = useState<Place | undefined>(demoPlaces[0]);
   const [selectedNeighborhoodId, setSelectedNeighborhoodId] = useState<string | undefined>();
   const [search, setSearch] = useState('');
-  const [activeFilters, setActiveFilters] = useState<string[]>([]);
+  const [activeFilters, setActiveFilters] = useState<CriteriaKey[]>([]);
+  const [submissionCriteria, setSubmissionCriteria] = useState<CriteriaKey[]>([]);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [note, setNote] = useState('');
   const [showAdmin, setShowAdmin] = useState(false);
+  const [activeView, setActiveView] = useState<AppView>('map');
+  const [sheetState, setSheetState] = useState<SheetState>('peek');
 
   const filteredPlaces = useMemo(() => {
     return demoPlaces.filter((place) => {
@@ -39,10 +38,29 @@ export function App() {
     });
   }, [activeFilters, search]);
 
-  function toggleFilter(filter: string) {
+  function toggleFilter(filter: CriteriaKey) {
     setActiveFilters((current) =>
       current.includes(filter) ? current.filter((item) => item !== filter) : [...current, filter]
     );
+  }
+
+  function toggleSubmissionCriteria(criteria: CriteriaKey) {
+    setSubmissionCriteria((current) =>
+      current.includes(criteria) ? current.filter((item) => item !== criteria) : [...current, criteria]
+    );
+  }
+
+  function selectPlace(place: Place) {
+    setSelectedPlace(place);
+    setSheetState('peek');
+    setActiveView('map');
+  }
+
+  function selectView(view: AppView) {
+    setActiveView(view);
+    if (view === 'map' && sheetState === 'hidden') {
+      setSheetState('peek');
+    }
   }
 
   async function login(provider: 'google' | 'apple') {
@@ -65,18 +83,18 @@ export function App() {
   }
 
   return (
-    <main className="app-shell">
+    <main className={`app-shell sheet-${sheetState}`}>
       <VaiMap
         places={filteredPlaces}
         neighborhoods={demoNeighborhoods}
         selectedNeighborhoodId={selectedNeighborhoodId}
-        onSelectPlace={setSelectedPlace}
+        onSelectPlace={selectPlace}
         onSelectNeighborhood={setSelectedNeighborhoodId}
       />
 
-      <header className="top-panel">
+      <header className={`top-panel ${sheetState === 'hidden' ? 'condensed' : ''}`}>
         <div className="brand-row">
-          <strong>Vaï</strong>
+          <button className="brand-button" onClick={() => selectView('map')}>Vaï</button>
           <div className="auth-actions">
             <button className="ghost-button" onClick={() => login('google')}>Google</button>
             <button className="ghost-button" onClick={() => login('apple')}>Apple</button>
@@ -85,36 +103,78 @@ export function App() {
             </button>
           </div>
         </div>
-        <input
-          className="search-input"
-          value={search}
-          onChange={(event) => setSearch(event.target.value)}
-          placeholder="Nom exact du lieu"
-          aria-label="Recherche par nom exact"
-        />
-        <nav className="quick-filters" aria-label="Filtres rapides">
-          {quickFilters.slice(0, 4).map((filter) => (
-            <button
-              key={filter}
-              className={activeFilters.includes(filter) ? 'chip active' : 'chip'}
-              onClick={() => toggleFilter(filter)}
-            >
-              {filter}
-            </button>
-          ))}
-          <button className="chip more" onClick={() => setDrawerOpen(true)}>
-            <SlidersHorizontal size={16} />
-            Tous les filtres
+        {sheetState !== 'hidden' ? (
+          <>
+            <div className="search-row">
+              <Search size={18} />
+              <input
+                className="search-input"
+                value={search}
+                onChange={(event) => setSearch(event.target.value)}
+                placeholder="Nom exact du lieu"
+                aria-label="Recherche par nom exact"
+              />
+            </div>
+            <nav className="quick-filters" aria-label="Filtres rapides">
+              {quickCriteriaKeys.map((filter) => (
+                <button
+                  key={filter}
+                  className={activeFilters.includes(filter) ? 'chip active' : 'chip'}
+                  onClick={() => toggleFilter(filter)}
+                >
+                  {criteriaLabels[filter]}
+                </button>
+              ))}
+              <button className="chip more" onClick={() => setDrawerOpen(true)}>
+                <SlidersHorizontal size={16} />
+                Tous les filtres
+              </button>
+            </nav>
+          </>
+        ) : (
+          <button className="compact-filter-button" onClick={() => setDrawerOpen(true)}>
+            <SlidersHorizontal size={17} />
+            {activeFilters.length ? `${activeFilters.length} filtres` : 'Filtres'}
           </button>
-        </nav>
+        )}
       </header>
 
-      <BottomSheet place={selectedPlace} note={note} onNoteChange={setNote} />
+      <nav className="bottom-nav" aria-label="Navigation principale">
+        <button className={activeView === 'map' ? 'active' : ''} onClick={() => selectView('map')}>
+          <MapPinned size={19} />
+          Carte
+        </button>
+        <button className={activeView === 'profile' ? 'active' : ''} onClick={() => selectView('profile')}>
+          <Heart size={19} />
+          To-do
+        </button>
+        <button className={activeView === 'submit' ? 'active' : ''} onClick={() => selectView('submit')}>
+          <ListPlus size={19} />
+          Proposer
+        </button>
+      </nav>
+
+      {activeView === 'profile' ? <ProfilePanel savedPlaces={demoPlaces.slice(0, 3)} /> : null}
+      {activeView === 'submit' ? (
+        <SubmissionPanel selectedCriteria={submissionCriteria} onToggleCriteria={toggleSubmissionCriteria} />
+      ) : null}
+
+      {activeView === 'map' ? (
+        <BottomSheet
+          place={selectedPlace}
+          note={note}
+          state={sheetState}
+          onNoteChange={setNote}
+          onExpand={() => setSheetState('expanded')}
+          onCollapse={() => setSheetState('peek')}
+          onHide={() => setSheetState('hidden')}
+        />
+      ) : null}
       <FilterDrawer
         open={drawerOpen}
-        filters={quickFilters}
         activeFilters={activeFilters}
         onToggleFilter={toggleFilter}
+        onClear={() => setActiveFilters([])}
         onClose={() => setDrawerOpen(false)}
       />
     </main>

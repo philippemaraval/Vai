@@ -13,6 +13,8 @@ create table if not exists public.profiles (
 create table if not exists public.places (
   id uuid primary key default gen_random_uuid(),
   name text not null check (char_length(name) between 2 and 160),
+  category text not null default 'Restaurant' check (category in ('Restaurant', 'Bar', 'Tiers-lieu', 'Cafe')),
+  address text,
   instagram_handle text not null check (instagram_handle ~ '^[A-Za-z0-9._]+$'),
   instagram_followers text,
   geom geometry(Point, 4326) not null,
@@ -31,9 +33,25 @@ create table if not exists public.criteria (
   has_wifi boolean not null default false,
   late_opening boolean not null default false,
   good_for_groups boolean not null default false,
+  quiet_spot boolean not null default false,
+  laptop_friendly boolean not null default false,
+  vegetarian_options boolean not null default false,
+  wheelchair_accessible boolean not null default false,
+  takes_reservations boolean not null default false,
+  kid_friendly boolean not null default false,
+  covered_outdoor boolean not null default false,
+  live_music_or_dj boolean not null default false,
+  sea_view boolean not null default false,
+  dog_friendly boolean not null default false,
   created_at timestamptz not null default now(),
   constraint minimum_five_criteria check (
-    (has_terrace::int + allows_cb_no_minimum::int + broadcasts_om::int + has_wifi::int + late_opening::int + good_for_groups::int) >= 5
+    (
+      has_terrace::int + allows_cb_no_minimum::int + broadcasts_om::int + has_wifi::int +
+      late_opening::int + good_for_groups::int + quiet_spot::int + laptop_friendly::int +
+      vegetarian_options::int + wheelchair_accessible::int + takes_reservations::int +
+      kid_friendly::int + covered_outdoor::int + live_music_or_dj::int + sea_view::int +
+      dog_friendly::int
+    ) >= 5
   )
 );
 
@@ -62,6 +80,8 @@ create or replace view public.places_public as
 select
   p.id,
   p.name,
+  p.category,
+  p.address,
   p.instagram_handle,
   p.instagram_followers,
   p.is_verified,
@@ -72,7 +92,17 @@ select
   c.broadcasts_om,
   c.has_wifi,
   c.late_opening,
-  c.good_for_groups
+  c.good_for_groups,
+  c.quiet_spot,
+  c.laptop_friendly,
+  c.vegetarian_options,
+  c.wheelchair_accessible,
+  c.takes_reservations,
+  c.kid_friendly,
+  c.covered_outdoor,
+  c.live_music_or_dj,
+  c.sea_view,
+  c.dog_friendly
 from public.places p
 left join public.criteria c on c.place_id = p.id
 where p.is_verified = true;

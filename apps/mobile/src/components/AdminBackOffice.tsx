@@ -1,3 +1,4 @@
+import { criteriaDefinitions } from '../lib/criteria';
 import type { Place } from '../lib/types';
 
 type AdminBackOfficeProps = {
@@ -5,6 +6,8 @@ type AdminBackOfficeProps = {
 };
 
 export function AdminBackOffice({ pendingPlaces }: AdminBackOfficeProps) {
+  const selectedPlace = pendingPlaces[0];
+
   return (
     <main className="admin-shell">
       <aside className="admin-list">
@@ -24,21 +27,38 @@ export function AdminBackOffice({ pendingPlaces }: AdminBackOfficeProps) {
         <div className="admin-form-grid">
           <label>
             Nom
-            <input defaultValue={pendingPlaces[0]?.name ?? ''} />
+            <input defaultValue={selectedPlace?.name ?? ''} />
+          </label>
+          <label>
+            Categorie
+            <input defaultValue={selectedPlace?.category ?? ''} />
           </label>
           <label>
             Instagram
-            <input defaultValue={pendingPlaces[0]?.instagram_handle ?? ''} />
+            <input defaultValue={selectedPlace?.instagram_handle ?? ''} />
+          </label>
+          <label>
+            Adresse
+            <input defaultValue={selectedPlace?.address ?? ''} />
           </label>
           <label>
             Latitude
-            <input defaultValue={pendingPlaces[0]?.latitude ?? ''} />
+            <input defaultValue={selectedPlace?.latitude ?? ''} />
           </label>
           <label>
             Longitude
-            <input defaultValue={pendingPlaces[0]?.longitude ?? ''} />
+            <input defaultValue={selectedPlace?.longitude ?? ''} />
           </label>
         </div>
+        <fieldset className="admin-criteria-editor">
+          <legend>Criteres</legend>
+          {criteriaDefinitions.map((criterion) => (
+            <label key={criterion.key} className="checkbox-row">
+              <input type="checkbox" defaultChecked={Boolean(selectedPlace?.criteria[criterion.key])} />
+              <span>{criterion.label}</span>
+            </label>
+          ))}
+        </fieldset>
         <div className="admin-actions">
           <button className="accept-button">Accepter</button>
           <button className="reject-button">Refuser</button>

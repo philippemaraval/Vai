@@ -32,6 +32,8 @@ app.use(
 const submissionSchema = z.object({
   name: z.string().min(2),
   instagram_handle: z.string().min(2).regex(/^[a-zA-Z0-9._]+$/),
+  category: z.enum(['Restaurant', 'Bar', 'Tiers-lieu', 'Cafe']).default('Restaurant'),
+  address: z.string().min(4).optional(),
   latitude: z.number().min(43.15).max(43.45),
   longitude: z.number().min(5.15).max(5.65),
   criteria: z.array(z.string()).min(5)
@@ -78,6 +80,8 @@ app.post('/places/submissions', async (request, response, next) => {
       .insert({
         name: input.name,
         instagram_handle: input.instagram_handle,
+        category: input.category,
+        address: input.address,
         geom: `POINT(${input.longitude} ${input.latitude})`,
         is_verified: false,
         created_by: userData.user.id
@@ -94,7 +98,17 @@ app.post('/places/submissions', async (request, response, next) => {
       broadcasts_om: input.criteria.includes('broadcasts_om'),
       has_wifi: input.criteria.includes('has_wifi'),
       late_opening: input.criteria.includes('late_opening'),
-      good_for_groups: input.criteria.includes('good_for_groups')
+      good_for_groups: input.criteria.includes('good_for_groups'),
+      quiet_spot: input.criteria.includes('quiet_spot'),
+      laptop_friendly: input.criteria.includes('laptop_friendly'),
+      vegetarian_options: input.criteria.includes('vegetarian_options'),
+      wheelchair_accessible: input.criteria.includes('wheelchair_accessible'),
+      takes_reservations: input.criteria.includes('takes_reservations'),
+      kid_friendly: input.criteria.includes('kid_friendly'),
+      covered_outdoor: input.criteria.includes('covered_outdoor'),
+      live_music_or_dj: input.criteria.includes('live_music_or_dj'),
+      sea_view: input.criteria.includes('sea_view'),
+      dog_friendly: input.criteria.includes('dog_friendly')
     };
 
     const { error: criteriaError } = await supabaseAdmin.from('criteria').insert(criteriaPayload);
