@@ -1,5 +1,5 @@
 import { Heart, ListPlus, MapPinned, Search, SlidersHorizontal, UserRound } from 'lucide-react';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { AdminBackOffice } from './components/AdminBackOffice';
 import { BottomSheet } from './components/BottomSheet';
 import { FilterDrawer } from './components/FilterDrawer';
@@ -19,7 +19,7 @@ function criterionMatches(place: Place, filter: CriteriaKey) {
 }
 
 export function App() {
-  const [selectedPlace, setSelectedPlace] = useState<Place | undefined>(demoPlaces[0]);
+  const [selectedPlace, setSelectedPlace] = useState<Place | undefined>();
   const [selectedNeighborhoodId, setSelectedNeighborhoodId] = useState<string | undefined>();
   const [search, setSearch] = useState('');
   const [activeFilters, setActiveFilters] = useState<CriteriaKey[]>([]);
@@ -28,15 +28,25 @@ export function App() {
   const [note, setNote] = useState('');
   const [showAdmin, setShowAdmin] = useState(false);
   const [activeView, setActiveView] = useState<AppView>('map');
-  const [sheetState, setSheetState] = useState<SheetState>('peek');
+  const [sheetState, setSheetState] = useState<SheetState>('hidden');
+  const hasActiveQuery = search.trim() !== '' || activeFilters.length > 0;
 
   const filteredPlaces = useMemo(() => {
+    if (!hasActiveQuery) return [];
+
     return demoPlaces.filter((place) => {
       const exactSearchMatch = search.trim() === '' || place.name.toLowerCase() === search.trim().toLowerCase();
       const filtersMatch = activeFilters.every((filter) => criterionMatches(place, filter));
       return exactSearchMatch && filtersMatch;
     });
-  }, [activeFilters, search]);
+  }, [activeFilters, hasActiveQuery, search]);
+
+  useEffect(() => {
+    if (!hasActiveQuery) {
+      setSelectedPlace(undefined);
+      setSheetState('hidden');
+    }
+  }, [hasActiveQuery]);
 
   function toggleFilter(filter: CriteriaKey) {
     setActiveFilters((current) =>
@@ -58,7 +68,7 @@ export function App() {
 
   function selectView(view: AppView) {
     setActiveView(view);
-    if (view === 'map' && sheetState === 'hidden') {
+    if (view === 'map' && sheetState === 'hidden' && selectedPlace) {
       setSheetState('peek');
     }
   }
@@ -83,7 +93,7 @@ export function App() {
   }
 
   return (
-    <main className={`app-shell sheet-${sheetState}`}>
+    <main className={`app-shell sheet-${sheetState} ${hasActiveQuery ? 'has-results' : 'empty-map'}`}>
       <VaiMap
         places={filteredPlaces}
         neighborhoods={demoNeighborhoods}
@@ -92,7 +102,7 @@ export function App() {
         onSelectNeighborhood={setSelectedNeighborhoodId}
       />
 
-      <header className={`top-panel ${sheetState === 'hidden' ? 'condensed' : ''}`}>
+      <header className="top-panel">
         <div className="brand-row">
           <button className="brand-button" onClick={() => selectView('map')}>Vaï</button>
           <div className="auth-actions">
@@ -103,41 +113,39 @@ export function App() {
             </button>
           </div>
         </div>
-        {sheetState !== 'hidden' ? (
-          <>
-            <div className="search-row">
-              <Search size={18} />
-              <input
-                className="search-input"
-                value={search}
-                onChange={(event) => setSearch(event.target.value)}
-                placeholder="Nom exact du lieu"
-                aria-label="Recherche par nom exact"
-              />
-            </div>
-            <nav className="quick-filters" aria-label="Filtres rapides">
-              {quickCriteriaKeys.map((filter) => (
-                <button
-                  key={filter}
-                  className={activeFilters.includes(filter) ? 'chip active' : 'chip'}
-                  onClick={() => toggleFilter(filter)}
-                >
-                  {criteriaLabels[filter]}
-                </button>
-              ))}
-              <button className="chip more" onClick={() => setDrawerOpen(true)}>
-                <SlidersHorizontal size={16} />
-                Tous les filtres
-              </button>
-            </nav>
-          </>
-        ) : (
-          <button className="compact-filter-button" onClick={() => setDrawerOpen(true)}>
-            <SlidersHorizontal size={17} />
-            {activeFilters.length ? `${activeFilters.length} filtres` : 'Filtres'}
+        <div className="search-row">
+          <Search size={18} />
+          <input
+            className="search-input"
+            value={search}
+            onChange={(event) => setSearch(event.target.value)}
+            placeholder="Nom exact du lieu"
+            aria-label="Recherche par nom exact"
+          />
+        </div>
+        <nav className="quick-filters" aria-label="Filtres rapides">
+          {quickCriteriaKeys.map((filter) => (
+            <button
+              key={filter}
+              className={activeFilters.includes(filter) ? 'chip active' : 'chip'}
+              onClick={() => toggleFilter(filter)}
+            >
+              {criteriaLabels[filter]}
+            </button>
+          ))}
+          <button className="chip more" onClick={() => setDrawerOpen(true)}>
+            <SlidersHorizontal size={16} />
+            Tous les filtres
           </button>
-        )}
+        </nav>
       </header>
+
+      {!hasActiveQuery && activeView === 'map' ? (
+        <div className="map-empty-hint">
+          <strong>Carte masquee au repos</strong>
+          <span>Choisis un filtre ou tape le nom exact d'un lieu.</span>
+        </div>
+      ) : null}
 
       <nav className="bottom-nav" aria-label="Navigation principale">
         <button className={activeView === 'map' ? 'active' : ''} onClick={() => selectView('map')}>
