@@ -1,0 +1,16 @@
+{
+  "name": "vai",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "apps/mobile",
+    "apps/api"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @vai/mobile",
+    "dev:api": "npm run dev --workspace @vai/api",
+    "build": "npm run build --workspace @vai/mobile && npm run build --workspace @vai/api",
+    "lint": "npm run lint --workspaces --if-present"
+  }
+}
