@@ -30,8 +30,41 @@ const criteriaKeys = [
 ];
 
 const queries = [
-  `node(area.searchArea)["amenity"="restaurant"]["name"];way(area.searchArea)["amenity"="restaurant"]["name"];`,
-  `node(area.searchArea)["amenity"~"^(bar|pub|biergarten)$"]["name"];way(area.searchArea)["amenity"~"^(bar|pub|biergarten)$"]["name"];`
+  {
+    label: 'restaurants-snacks',
+    fragment: `node(area.searchArea)["amenity"~"^(restaurant|fast_food|food_court)$"]["name"];way(area.searchArea)["amenity"~"^(restaurant|fast_food|food_court)$"]["name"];`,
+    optional: false
+  },
+  {
+    label: 'bars',
+    fragment: `node(area.searchArea)["amenity"~"^(bar|pub|biergarten)$"]["name"];way(area.searchArea)["amenity"~"^(bar|pub|biergarten)$"]["name"];`,
+    optional: false
+  },
+  {
+    label: 'cafes-glaciers',
+    fragment: `node(area.searchArea)["amenity"~"^(cafe|ice_cream)$"]["name"];way(area.searchArea)["amenity"~"^(cafe|ice_cream)$"]["name"];`,
+    optional: false
+  },
+  {
+    label: 'commerces-de-bouche',
+    fragment: `node(area.searchArea)["shop"~"^(bakery|pastry|confectionery|deli|cheese|coffee|wine|beverages|greengrocer|butcher|seafood|alcohol|tea|chocolate|spices)$"]["name"];way(area.searchArea)["shop"~"^(bakery|pastry|confectionery|deli|cheese|coffee|wine|beverages|greengrocer|butcher|seafood|alcohol|tea|chocolate|spices)$"]["name"];`,
+    optional: false
+  },
+  {
+    label: 'distribution-alimentaire',
+    fragment: `node(area.searchArea)["shop"~"^(supermarket|convenience|organic|health_food)$"]["name"];way(area.searchArea)["shop"~"^(supermarket|convenience|organic|health_food)$"]["name"];`,
+    optional: false
+  },
+  {
+    label: 'instagram-contact',
+    fragment: `node(area.searchArea)["contact:instagram"]["name"];way(area.searchArea)["contact:instagram"]["name"];`,
+    optional: true
+  },
+  {
+    label: 'instagram',
+    fragment: `node(area.searchArea)["instagram"]["name"];way(area.searchArea)["instagram"]["name"];`,
+    optional: true
+  }
 ];
 
 function ascii(value) {
@@ -51,11 +84,19 @@ function quote(value) {
 
 function category(tags) {
   if (['bar', 'pub', 'biergarten'].includes(tags.amenity)) return 'Bar';
+  if (['cafe', 'ice_cream'].includes(tags.amenity)) return 'Cafe';
+  if (tags.shop) return 'Commerce alimentaire';
   return 'Restaurant';
 }
 
 function instagram(tags) {
-  const raw = tags['contact:instagram'] ?? tags.instagram ?? tags['social_media:instagram'];
+  const raw =
+    tags['contact:instagram'] ??
+    tags.instagram ??
+    tags['social_media:instagram'] ??
+    [tags.website, tags['contact:website'], tags.url, tags['contact:facebook'], tags.facebook].find((value) =>
+      /instagram\.com/i.test(value ?? '')
+    );
   if (!raw) return undefined;
   return ascii(raw)
     .replace(/^https?:\/\/(www\.)?instagram\.com\//i, '')
@@ -81,24 +122,50 @@ function coordinates(element) {
 }
 
 function includesLateClosing(openingHours) {
-  return /2[2-4]:|23|24\/7/i.test(openingHours ?? '');
+  return /2[2-4]:|23|24\/7|00:|01:|02:/i.test(openingHours ?? '');
+}
+
+function isYes(value) {
+  return ['yes', 'true', '1', 'free', 'wlan', 'wifi', 'cards', 'credit_cards', 'debit_cards'].includes(
+    String(value ?? '').toLowerCase()
+  );
 }
 
 function inferCriteria(tags, cat) {
   const selected = new Set();
-  if (['yes', 'terrace', 'outdoor'].includes(tags.outdoor_seating)) selected.add('has_terrace');
-  if (tags.covered === 'yes' || tags['covered:outdoor_seating'] === 'yes') selected.add('covered_outdoor');
-  if (['wlan', 'yes', 'free'].includes(tags.internet_access)) selected.add('has_wifi');
+  if (['yes', 'terrace', 'outdoor'].includes(tags.outdoor_seating) || isYes(tags.terrace)) selected.add('has_terrace');
+  if (isYes(tags.covered) || isYes(tags['covered:outdoor_seating'])) selected.add('covered_outdoor');
+  if (isYes(tags.internet_access) || isYes(tags['internet_access:wlan'])) selected.add('has_wifi');
   if (includesLateClosing(tags.opening_hours)) selected.add('late_opening');
   if (tags.wheelchair === 'yes' || tags.wheelchair === 'limited') selected.add('wheelchair_accessible');
-  if (/vegetarian|vegan/i.test(`${tags.cuisine ?? ''} ${tags.diet ?? ''} ${tags['diet:vegetarian'] ?? ''} ${tags['diet:vegan'] ?? ''}`)) {
+  if (
+    /vegetarian|vegan|salad|falafel|lebanese|indian|thai|vietnamese|middle_eastern|mediterranean/i.test(
+      `${tags.cuisine ?? ''} ${tags.diet ?? ''} ${tags['diet:vegetarian'] ?? ''} ${tags['diet:vegan'] ?? ''}`
+    ) ||
+    isYes(tags['diet:vegetarian']) ||
+    isYes(tags['diet:vegan'])
+  ) {
     selected.add('vegetarian_options');
   }
-  if (tags.reservation === 'yes' || tags.reservations === 'yes') selected.add('takes_reservations');
-  if (tags.dog === 'yes' || tags.dogs === 'yes') selected.add('dog_friendly');
-  if (tags.live_music === 'yes' || tags.music === 'live' || tags.dance === 'yes') selected.add('live_music_or_dj');
-  if (tags.kids_area === 'yes' || tags.changing_table === 'yes') selected.add('kid_friendly');
+  if (isYes(tags.reservation) || isYes(tags.reservations) || isYes(tags.booking)) selected.add('takes_reservations');
+  if (isYes(tags.dog) || isYes(tags.dogs)) selected.add('dog_friendly');
+  if (isYes(tags.live_music) || tags.music === 'live' || isYes(tags.dance)) selected.add('live_music_or_dj');
+  if (isYes(tags.kids_area) || isYes(tags.changing_table) || isYes(tags.highchair)) selected.add('kid_friendly');
   if (tags.sport === 'soccer' || /football|soccer/i.test(tags.sport_screening ?? '')) selected.add('broadcasts_om');
+  if (
+    isYes(tags['payment:cards']) ||
+    isYes(tags['payment:credit_cards']) ||
+    isYes(tags['payment:debit_cards']) ||
+    isYes(tags['payment:contactless']) ||
+    isYes(tags['payment:visa']) ||
+    isYes(tags['payment:mastercard'])
+  ) {
+    selected.add('allows_cb_no_minimum');
+  }
+  if (Number(tags.capacity) >= 20 || isYes(tags.group_only) || tags.amenity === 'food_court') selected.add('good_for_groups');
+  if (tags.takeaway === 'only' || tags.amenity === 'fast_food') selected.add('good_for_groups');
+  if (tags.shop === 'wine' || tags.shop === 'beverages') selected.add('good_for_groups');
+  if (cat === 'Cafe' && isYes(tags.internet_access)) selected.add('laptop_friendly');
   return [...selected].filter((key) => criteriaKeys.includes(key));
 }
 
@@ -119,7 +186,8 @@ function dedupeKey(name, lat, lon) {
   return `${ascii(name).toLowerCase().replace(/[^a-z0-9]/g, '')}:${lat.toFixed(3)}:${lon.toFixed(3)}`;
 }
 
-async function fetchOsmQuery(fragment, index) {
+async function fetchOsmQuery(queryConfig, index) {
+  const { fragment, label } = queryConfig;
   const query = `[out:json][timeout:60];area["boundary"="administrative"]["admin_level"="8"]["name"="Marseille"]->.searchArea;(${fragment});out center tags;`;
   let lastError;
 
@@ -144,7 +212,7 @@ async function fetchOsmQuery(fragment, index) {
       }
 
       const json = await response.json();
-      console.log(`Fetched batch ${index + 1}/${queries.length}: ${json.elements.length} OSM elements from ${endpoint}`);
+      console.log(`Fetched batch ${index + 1}/${queries.length} (${label}): ${json.elements.length} OSM elements from ${endpoint}`);
       return json.elements;
     } catch (error) {
       clearTimeout(timeout);
@@ -158,8 +226,13 @@ async function fetchOsmQuery(fragment, index) {
 
 async function fetchOsm() {
   const batches = [];
-  for (const [index, fragment] of queries.entries()) {
-    batches.push(...(await fetchOsmQuery(fragment, index)));
+  for (const [index, queryConfig] of queries.entries()) {
+    try {
+      batches.push(...(await fetchOsmQuery(queryConfig, index)));
+    } catch (error) {
+      if (!queryConfig.optional) throw error;
+      console.warn(`Skipping optional batch ${queryConfig.label}: ${error instanceof Error ? error.message : String(error)}`);
+    }
   }
   return batches;
 }
@@ -192,6 +265,7 @@ function score(seed) {
   if (seed.instagram_handle) value += 5;
   if (seed.address !== 'Marseille') value += 3;
   if (seed.category === 'Restaurant' || seed.category === 'Bar' || seed.category === 'Cafe') value += 2;
+  if (seed.category === 'Commerce alimentaire') value += 1;
   return value;
 }
 

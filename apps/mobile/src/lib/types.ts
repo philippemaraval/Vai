@@ -26,7 +26,7 @@ export type Place = {
   longitude: number;
   neighborhood?: string;
   address?: string;
-  category: 'Restaurant' | 'Bar' | 'Tiers-lieu' | 'Cafe';
+  category: 'Restaurant' | 'Bar' | 'Tiers-lieu' | 'Cafe' | 'Commerce alimentaire';
   criteria: PlaceCriteria;
 };
 

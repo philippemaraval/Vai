@@ -13,7 +13,7 @@ import type { Place } from './lib/types';
 
 type AppView = 'map' | 'profile' | 'submit';
 type SheetState = 'hidden' | 'peek' | 'expanded';
-type CategoryFilter = 'Restaurant' | 'Bar';
+type CategoryFilter = 'Restaurant' | 'Bar' | 'Cafe' | 'Commerce alimentaire';
 
 function criterionMatches(place: Place, filter: CriteriaKey) {
   return place.criteria[filter];
@@ -156,6 +156,18 @@ export function App() {
             onClick={() => toggleCategory('Bar')}
           >
             Bars
+          </button>
+          <button
+            className={activeCategories.includes('Cafe') ? 'chip active' : 'chip'}
+            onClick={() => toggleCategory('Cafe')}
+          >
+            Cafes
+          </button>
+          <button
+            className={activeCategories.includes('Commerce alimentaire') ? 'chip active' : 'chip'}
+            onClick={() => toggleCategory('Commerce alimentaire')}
+          >
+            Food shops
           </button>
           <button className="chip more" onClick={() => setDrawerOpen(true)}>
             <SlidersHorizontal size={16} />

@@ -13,7 +13,7 @@ create table if not exists public.profiles (
 create table if not exists public.places (
   id uuid primary key default gen_random_uuid(),
   name text not null check (char_length(name) between 2 and 160),
-  category text not null default 'Restaurant' check (category in ('Restaurant', 'Bar', 'Tiers-lieu', 'Cafe')),
+  category text not null default 'Restaurant' check (category in ('Restaurant', 'Bar', 'Tiers-lieu', 'Cafe', 'Commerce alimentaire')),
   address text,
   instagram_handle text not null check (instagram_handle ~ '^[A-Za-z0-9._]+$'),
   instagram_followers text,

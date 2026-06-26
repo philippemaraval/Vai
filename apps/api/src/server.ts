@@ -32,7 +32,7 @@ app.use(
 const submissionSchema = z.object({
   name: z.string().min(2),
   instagram_handle: z.string().min(2).regex(/^[a-zA-Z0-9._]+$/),
-  category: z.enum(['Restaurant', 'Bar', 'Tiers-lieu', 'Cafe']).default('Restaurant'),
+  category: z.enum(['Restaurant', 'Bar', 'Tiers-lieu', 'Cafe', 'Commerce alimentaire']).default('Restaurant'),
   address: z.string().min(4).optional(),
   latitude: z.number().min(43.15).max(43.45),
   longitude: z.number().min(5.15).max(5.65),
