@@ -13,6 +13,7 @@ import type { Place } from './lib/types';
 
 type AppView = 'map' | 'profile' | 'submit';
 type SheetState = 'hidden' | 'peek' | 'expanded';
+type CategoryFilter = 'Restaurant' | 'Bar';
 
 function criterionMatches(place: Place, filter: CriteriaKey) {
   return place.criteria[filter];
@@ -23,13 +24,14 @@ export function App() {
   const [selectedNeighborhoodId, setSelectedNeighborhoodId] = useState<string | undefined>();
   const [search, setSearch] = useState('');
   const [activeFilters, setActiveFilters] = useState<CriteriaKey[]>([]);
+  const [activeCategories, setActiveCategories] = useState<CategoryFilter[]>([]);
   const [submissionCriteria, setSubmissionCriteria] = useState<CriteriaKey[]>([]);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [note, setNote] = useState('');
   const [showAdmin, setShowAdmin] = useState(false);
   const [activeView, setActiveView] = useState<AppView>('map');
   const [sheetState, setSheetState] = useState<SheetState>('hidden');
-  const hasActiveQuery = search.trim() !== '' || activeFilters.length > 0;
+  const hasActiveQuery = search.trim() !== '' || activeFilters.length > 0 || activeCategories.length > 0;
 
   const filteredPlaces = useMemo(() => {
     if (!hasActiveQuery) return [];
@@ -37,9 +39,10 @@ export function App() {
     return demoPlaces.filter((place) => {
       const exactSearchMatch = search.trim() === '' || place.name.toLowerCase() === search.trim().toLowerCase();
       const filtersMatch = activeFilters.every((filter) => criterionMatches(place, filter));
-      return exactSearchMatch && filtersMatch;
+      const categoryMatch = activeCategories.length === 0 || activeCategories.includes(place.category as CategoryFilter);
+      return exactSearchMatch && filtersMatch && categoryMatch;
     });
-  }, [activeFilters, hasActiveQuery, search]);
+  }, [activeCategories, activeFilters, hasActiveQuery, search]);
 
   useEffect(() => {
     if (!hasActiveQuery) {
@@ -51,6 +54,12 @@ export function App() {
   function toggleFilter(filter: CriteriaKey) {
     setActiveFilters((current) =>
       current.includes(filter) ? current.filter((item) => item !== filter) : [...current, filter]
+    );
+  }
+
+  function toggleCategory(category: CategoryFilter) {
+    setActiveCategories((current) =>
+      current.includes(category) ? current.filter((item) => item !== category) : [...current, category]
     );
   }
 
@@ -133,6 +142,18 @@ export function App() {
               {criteriaLabels[filter]}
             </button>
           ))}
+          <button
+            className={activeCategories.includes('Restaurant') ? 'chip active' : 'chip'}
+            onClick={() => toggleCategory('Restaurant')}
+          >
+            Restaurants
+          </button>
+          <button
+            className={activeCategories.includes('Bar') ? 'chip active' : 'chip'}
+            onClick={() => toggleCategory('Bar')}
+          >
+            Bars
+          </button>
           <button className="chip more" onClick={() => setDrawerOpen(true)}>
             <SlidersHorizontal size={16} />
             Tous les filtres
@@ -182,7 +203,10 @@ export function App() {
         open={drawerOpen}
         activeFilters={activeFilters}
         onToggleFilter={toggleFilter}
-        onClear={() => setActiveFilters([])}
+        onClear={() => {
+          setActiveFilters([]);
+          setActiveCategories([]);
+        }}
         onClose={() => setDrawerOpen(false)}
       />
     </main>

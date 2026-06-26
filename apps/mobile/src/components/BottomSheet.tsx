@@ -65,12 +65,16 @@ export function BottomSheet({ place, note, state, onNoteChange, onExpand, onColl
           </button>
         </div>
       </div>
-      <p className="social-proof">
-        <a href={`https://www.instagram.com/${place.instagram_handle}/`} target="_blank" rel="noreferrer">
-          @{place.instagram_handle}
-        </a>
-        <span> · {place.instagram_followers}</span>
-      </p>
+      {place.instagram_handle ? (
+        <p className="social-proof">
+          <a href={`https://www.instagram.com/${place.instagram_handle}/`} target="_blank" rel="noreferrer">
+            @{place.instagram_handle}
+          </a>
+          {place.instagram_followers ? <span> · {place.instagram_followers}</span> : null}
+        </p>
+      ) : (
+        <p className="social-proof">Instagram non renseigne</p>
+      )}
       {place.address ? <p className="place-address">{place.address}</p> : null}
       <ul className="criteria-list">
         {activeCriteria.map((criterion) => (

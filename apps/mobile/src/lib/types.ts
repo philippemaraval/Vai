@@ -20,8 +20,8 @@ export type PlaceCriteria = {
 export type Place = {
   id: string;
   name: string;
-  instagram_handle: string;
-  instagram_followers: string;
+  instagram_handle?: string;
+  instagram_followers?: string;
   latitude: number;
   longitude: number;
   neighborhood?: string;

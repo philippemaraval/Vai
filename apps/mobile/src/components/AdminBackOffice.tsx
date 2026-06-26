@@ -15,7 +15,7 @@ export function AdminBackOffice({ pendingPlaces }: AdminBackOfficeProps) {
         {pendingPlaces.map((place) => (
           <button key={place.id} className="admin-list-item">
             <strong>{place.name}</strong>
-            <span>@{place.instagram_handle}</span>
+            <span>{place.instagram_handle ? `@${place.instagram_handle}` : 'Instagram non renseigne'}</span>
           </button>
         ))}
       </aside>
